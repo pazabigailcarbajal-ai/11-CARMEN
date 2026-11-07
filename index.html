@@ -1,0 +1,1552 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Carmen · Derecho Penal · Cap. 11</title>
+<meta name="description" content="Plataforma de estudio guiado de la Segunda parte, Capítulo sexto (Antijuridicidad) de Lecciones de derecho penal, Díaz-Aranda, ajustada a Carmen">
+<meta name="theme-color" content="#c2185b">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=DM+Serif+Display&display=swap">
+<style>
+/* Concepto: «Expediente rosa» (mismo estilo que los capítulos 2 a 10); citas del libro como fojas engrapadas, rosa como color de marca. */
+:root {
+  --bg: #fbf1f5;
+  --surface: #ffffff;
+  --surface-2: #f8e6ee;
+  --ink: #2b1621;
+  --muted: #7b5b69;
+  --line: #efd3df;
+  --accent: #c2185b;
+  --accent-2: #e04a86;
+  --accent-soft: #fde1ec;
+  --on-accent: #ffffff;
+  --mark: #ffc4da;
+  --mark-ink: #2b1621;
+  --ok: #18794e;
+  --ok-soft: #ddf3e8;
+  --bad: #b3261e;
+  --bad-soft: #fde4e1;
+  --warn: #8a5300;
+  --warn-soft: #fff0d9;
+  --paper-rule: #f3c6d7;
+  --shadow: 0 1px 2px rgba(120, 20, 60, .06), 0 8px 22px rgba(120, 20, 60, .07);
+  --font-display: "DM Serif Display", Georgia, "Times New Roman", serif;
+  --font-body: "Atkinson Hyperlegible", "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
+  --r: 16px;
+  --cw: 24px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #170c12; --surface: #241520; --surface-2: #301c29; --ink: #f9e9f0; --muted: #c4a3b2; --line: #44293a;
+    --accent: #ff6fa3; --accent-2: #ff9cc0; --accent-soft: #3d1a2c; --on-accent: #2a0716;
+    --mark: #6e2547; --mark-ink: #fff0f6; --ok: #62d39c; --ok-soft: #153325; --bad: #ff8b80; --bad-soft: #3e1c1a;
+    --warn: #ffc56b; --warn-soft: #3a2a12; --paper-rule: #5c2a42; --shadow: 0 1px 2px rgba(0,0,0,.35), 0 8px 22px rgba(0,0,0,.3);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #170c12; --surface: #241520; --surface-2: #301c29; --ink: #f9e9f0; --muted: #c4a3b2; --line: #44293a;
+  --accent: #ff6fa3; --accent-2: #ff9cc0; --accent-soft: #3d1a2c; --on-accent: #2a0716;
+  --mark: #6e2547; --mark-ink: #fff0f6; --ok: #62d39c; --ok-soft: #153325; --bad: #ff8b80; --bad-soft: #3e1c1a;
+  --warn: #ffc56b; --warn-soft: #3a2a12; --paper-rule: #5c2a42; --shadow: 0 1px 2px rgba(0,0,0,.35), 0 8px 22px rgba(0,0,0,.3);
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 17px; line-height: 1.6; }
+button, input, select, textarea { font: inherit; color: inherit; }
+button { cursor: pointer; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; border-radius: 8px; }
+mark { background: linear-gradient(transparent 40%, var(--mark) 40%, var(--mark) 92%, transparent 92%); color: var(--mark-ink); padding: 0 2px; }
+a { color: var(--accent); }
+.app { max-width: 720px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 18px calc(100px + env(safe-area-inset-bottom, 0px)); display: grid; gap: 16px; grid-template-columns: minmax(0, 1fr); }
+.app > * { min-width: 0; }
+h1, h2, h3 { font-family: var(--font-display); font-weight: 400; line-height: 1.15; margin: 0; text-wrap: balance; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.4rem; }
+h3 { font-size: 1.1rem; font-family: var(--font-body); font-weight: 700; }
+p { margin: 0; }
+.muted { color: var(--muted); }
+.small { font-size: .88rem; }
+.center { text-align: center; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+.eyebrow { font-size: .74rem; letter-spacing: .09em; text-transform: uppercase; font-weight: 700; color: var(--muted); }
+.stack { display: grid; gap: 12px; min-width: 0; grid-template-columns: minmax(0, 1fr); }
+.stack.tight { gap: 3px; }
+.row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.spread { display: flex; gap: 10px; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+.card { background: var(--surface); border-radius: var(--r); box-shadow: var(--shadow); padding: 18px; min-width: 0; display: grid; gap: 10px; }
+.card.quiet { box-shadow: none; background: transparent; border: 1.5px dashed var(--paper-rule); }
+.tnum { font-variant-numeric: tabular-nums; }
+.tight-list { margin: 0; padding-left: 20px; display: grid; gap: 6px; }
+
+.btn { border: 0; border-radius: 999px; padding: 11px 20px; font-weight: 700; background: var(--accent); color: var(--on-accent); display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 46px; text-decoration: none; max-width: 100%; text-align: center; line-height: 1.25; }
+.btn:active { transform: translateY(1px); }
+.btn.ghost { background: var(--accent-soft); color: var(--accent); }
+.btn.line { background: transparent; color: var(--ink); border: 1.5px solid var(--line); }
+.btn.small { padding: 8px 14px; min-height: 40px; font-size: .9rem; }
+.btn.wide { width: 100%; }
+.btn[disabled] { opacity: .45; cursor: not-allowed; }
+.icon-btn { border: 1.5px solid var(--line); background: var(--surface); border-radius: 999px; padding: 6px 12px; font-size: .86rem; font-weight: 700; min-height: 38px; display: inline-flex; gap: 6px; align-items: center; color: var(--ink); text-align: left; }
+.icon-btn.on { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+.chip { display: inline-flex; align-items: center; font-size: .72rem; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; padding: 3px 9px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); white-space: nowrap; }
+.chip.done { background: var(--ok-soft); color: var(--ok); }
+.bar { height: 10px; background: var(--surface-2); border-radius: 999px; overflow: hidden; }
+.bar > i { display: block; height: 100%; background: var(--accent); border-radius: 999px; transition: width .4s ease; }
+.bar.ok > i { background: var(--ok); }
+
+/* Inicio */
+.hero { background: var(--accent); color: var(--on-accent); border-radius: 22px; padding: 22px 20px; display: grid; gap: 10px; position: relative; overflow: hidden; }
+.hero::after { content: "§"; position: absolute; right: -8px; top: -38px; font-family: var(--font-display); font-size: 11rem; line-height: 1; opacity: .13; pointer-events: none; }
+.hero h1 { font-size: 2.3rem; color: var(--on-accent); }
+.hero .sub { opacity: .92; max-width: 46ch; }
+.eyebrow.on-acc { color: var(--on-accent); opacity: .8; }
+.hero-meter { display: grid; gap: 6px; margin-top: 4px; font-weight: 700; font-size: .92rem; }
+.hero .bar { background: rgba(255,255,255,.28); }
+.hero .bar > i { background: var(--on-accent); }
+.next-row { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 14px; align-items: start; }
+.big-ic { width: 52px; height: 52px; border-radius: 14px; background: var(--accent-soft); display: grid; place-items: center; font-size: 1.6rem; }
+.due { border: 2px solid var(--accent); }
+.mission-l { display: flex; gap: 10px; align-items: center; padding: 12px; border-radius: 12px; background: var(--surface-2); border: 0; width: 100%; text-align: left; }
+.mission-l .t { flex: 1; min-width: 0; font-weight: 700; }
+.method-l { margin: 0; padding-left: 22px; display: grid; gap: 8px; }
+.method-l li::marker { color: var(--accent); font-weight: 800; }
+.motiv { font-family: var(--font-display); font-size: 1.3rem; line-height: 1.3; color: var(--accent); }
+
+/* Aprender */
+.route { display: grid; gap: 8px; }
+.lrow { display: grid; grid-template-columns: 36px minmax(0, 1fr) auto; gap: 12px; align-items: center; padding: 12px 14px; border-radius: 14px; background: var(--surface); border: 1.5px solid var(--line); text-align: left; width: 100%; }
+.lrow .n { width: 36px; height: 36px; border-radius: 50%; border: 2px solid var(--paper-rule); display: grid; place-items: center; font-weight: 800; color: var(--accent); font-family: var(--font-display); font-size: 1.05rem; }
+.lrow.done .n { background: var(--ok); border-color: var(--ok); color: var(--on-accent); font-family: var(--font-body); }
+.lrow .tt { font-weight: 700; line-height: 1.3; }
+.lrow .meta { font-size: .8rem; color: var(--muted); line-height: 1.35; }
+.lrow .ic { font-size: 1.3rem; }
+.back { border: 0; background: none; color: var(--accent); font-weight: 800; padding: 6px 0; justify-self: start; }
+.lesson-top { display: grid; gap: 8px; }
+.goal { font-size: .95rem; color: var(--muted); }
+.steps-dots { display: flex; gap: 4px; }
+.steps-dots i { flex: 1; height: 6px; border-radius: 99px; background: var(--surface-2); }
+.steps-dots i.on { background: var(--accent); }
+.steps-dots i.cur { background: var(--accent-2); }
+.sheet { background: var(--surface); border-radius: var(--r); box-shadow: var(--shadow); padding: 20px 18px 20px 30px; position: relative; display: grid; gap: 12px; min-width: 0; }
+.sheet::before { content: ""; position: absolute; left: 14px; top: 16px; bottom: 16px; width: 2px; background: var(--paper-rule); border-radius: 2px; }
+.sheet h2 { color: var(--accent); }
+.sheet .body { font-size: 1.07rem; line-height: 1.7; }
+.nav-btns { display: flex; gap: 10px; }
+.nav-btns .btn { flex: 1; }
+.callout { border-radius: 14px; padding: 14px 16px; display: grid; gap: 8px; }
+.callout.trap { background: var(--bad-soft); }
+.callout.trap h3 { color: var(--bad); }
+.callout.trick { background: var(--accent-soft); }
+.callout.trick h3 { color: var(--accent); }
+.callout ul { margin: 0; padding-left: 20px; display: grid; gap: 6px; }
+.ta { width: 100%; border: 1.5px solid var(--line); border-radius: 12px; padding: 12px 14px; background: var(--bg); resize: vertical; min-height: 140px; line-height: 1.55; }
+.model { background: var(--ok-soft); border-radius: 12px; padding: 12px 14px; display: grid; gap: 6px; }
+.check { display: flex; gap: 10px; align-items: flex-start; padding: 8px 0; border-top: 1px solid var(--line); }
+.check input { width: 22px; height: 22px; accent-color: var(--accent); flex: none; margin-top: 2px; }
+
+/* Visuales */
+.vis { min-width: 0; }
+.line-wrap { overflow-x: auto; padding-bottom: 6px; }
+.line { display: flex; min-width: max-content; }
+.line-item { width: 138px; display: grid; gap: 4px; justify-items: center; align-content: start; text-align: center; position: relative; padding: 0 6px; }
+.line-item::before { content: ""; position: absolute; top: calc(2.6em + 9px); left: 0; right: 0; height: 3px; background: var(--paper-rule); }
+.line-age { font-size: .78rem; font-weight: 800; color: var(--accent); min-height: 2.6em; display: grid; align-items: end; line-height: 1.2; }
+.line-dot { width: 18px; height: 18px; border-radius: 50%; background: var(--accent); border: 3px solid var(--surface); box-shadow: 0 0 0 2px var(--accent); z-index: 1; }
+.line-t { font-weight: 700; font-size: .88rem; line-height: 1.2; }
+.line-s { font-size: .76rem; color: var(--muted); line-height: 1.3; }
+.flow { display: grid; gap: 4px; }
+.flow-step { display: flex; gap: 10px; align-items: flex-start; background: var(--surface-2); border-radius: 12px; padding: 10px 12px; }
+.flow-step b { display: block; line-height: 1.25; }
+.flow-step small { display: block; line-height: 1.4; margin-top: 2px; color: var(--muted); font-size: .88rem; }
+.flow-n { flex: none; width: 26px; height: 26px; border-radius: 50%; background: var(--accent); color: var(--on-accent); display: grid; place-items: center; font-weight: 800; font-size: .8rem; }
+.flow-arrow { text-align: center; color: var(--muted); line-height: 1; font-size: .9rem; }
+.tbl-wrap { overflow-x: auto; border-radius: 12px; border: 1px solid var(--line); }
+.tbl { border-collapse: collapse; width: 100%; font-size: .92rem; min-width: 420px; }
+.tbl th { background: var(--accent-soft); color: var(--accent); text-align: left; padding: 8px 10px; font-size: .76rem; letter-spacing: .05em; text-transform: uppercase; }
+.tbl td { padding: 9px 10px; border-top: 1px solid var(--line); vertical-align: top; line-height: 1.4; }
+.tree { display: grid; gap: 10px; justify-items: center; }
+.tree-root { background: var(--accent); color: var(--on-accent); padding: 8px 18px; border-radius: 12px; font-family: var(--font-display); font-size: 1.1rem; }
+.tree-kids { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 8px; width: 100%; }
+.tree-kid { border: 2px solid var(--accent); border-radius: 12px; padding: 10px; display: grid; gap: 4px; }
+.tree-kid small { color: var(--muted); line-height: 1.35; }
+.vs { display: grid; grid-template-columns: minmax(0,1fr) auto minmax(0,1fr); gap: 8px; }
+.vs-col { background: var(--surface-2); border-radius: 12px; padding: 12px; min-width: 0; }
+.vs-h { font-weight: 800; font-size: .82rem; letter-spacing: .03em; color: var(--accent); margin-bottom: 6px; text-transform: uppercase; }
+.vs-col ul { margin: 0; padding-left: 18px; display: grid; gap: 5px; font-size: .93rem; line-height: 1.4; }
+.vs-mid { align-self: center; font-family: var(--font-display); color: var(--muted); }
+@media (max-width: 480px) { .vs { grid-template-columns: minmax(0,1fr); } .vs-mid { justify-self: center; } }
+.pairs { display: grid; gap: 6px; }
+.pair { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); gap: 12px; background: var(--surface-2); border-radius: 12px; padding: 10px 12px; font-size: .93rem; line-height: 1.4; }
+@media (max-width: 480px) { .pair { grid-template-columns: minmax(0,1fr); gap: 2px; } }
+.bookq, .nowbox { border-radius: 4px 14px 14px 4px; border-left: 4px solid var(--accent); background: var(--accent-soft); padding: 12px 14px; display: grid; gap: 6px; }
+.nowbox { border-left-color: var(--warn); background: var(--warn-soft); }
+.bookq-h { font-size: .72rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); }
+.nowbox .bookq-h { color: var(--warn); }
+.bookq-b { font-size: .98rem; line-height: 1.55; }
+
+/* Preguntas */
+.q { gap: 12px; }
+.q-text { font-size: 1.07rem; font-weight: 700; line-height: 1.5; }
+.qn { display: inline-grid; place-items: center; width: 26px; height: 26px; border-radius: 50%; background: var(--accent-soft); color: var(--accent); font-size: .8rem; margin-right: 8px; vertical-align: 2px; }
+.opts { display: grid; gap: 8px; }
+.opt { display: grid; grid-template-columns: 30px minmax(0, 1fr); gap: 10px; align-items: center; text-align: left; border: 1.5px solid var(--line); background: var(--surface); border-radius: 14px; padding: 10px 12px; min-height: 50px; line-height: 1.4; }
+.opt .ov { width: 30px; height: 30px; border-radius: 50%; border: 2px solid var(--paper-rule); display: grid; place-items: center; font-weight: 800; font-size: .82rem; color: var(--muted); }
+.opt:not([disabled]):hover { border-color: var(--accent); }
+.opt.ok { border-color: var(--ok); background: var(--ok-soft); }
+.opt.ok .ov { background: var(--ok); border-color: var(--ok); color: var(--surface); }
+.opt.no { border-color: var(--bad); background: var(--bad-soft); }
+.opt.no .ov { background: var(--bad); border-color: var(--bad); color: var(--surface); }
+.opt[disabled] { cursor: default; }
+.fb { border-radius: 12px; padding: 12px 14px; display: grid; gap: 6px; }
+.fb.ok { background: var(--ok-soft); }
+.fb.no { background: var(--bad-soft); }
+.fb b.h { font-family: var(--font-display); font-weight: 400; font-size: 1.15rem; }
+.fb.ok b.h { color: var(--ok); }
+.fb.no b.h { color: var(--bad); }
+.fb .pg { font-size: .8rem; font-weight: 700; color: var(--muted); }
+.grade { justify-items: center; text-align: center; padding: 22px; }
+.grade > b { font-family: var(--font-display); font-weight: 400; font-size: 4rem; line-height: 1; color: var(--accent); }
+.review-item { border-top: 1px solid var(--line); padding-top: 10px; display: grid; gap: 4px; font-size: .95rem; overflow-wrap: anywhere; }
+.review-item .ok { color: var(--ok); font-weight: 700; }
+.search { width: 100%; border: 1.5px solid var(--line); border-radius: 12px; padding: 11px 14px; background: var(--surface); min-height: 46px; }
+
+/* Practicar */
+.tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(155px, 1fr)); gap: 10px; }
+.tile { border: 0; text-align: left; background: var(--surface); border-radius: var(--r); box-shadow: var(--shadow); padding: 14px; display: grid; gap: 4px; align-content: start; min-height: 112px; }
+.tile .ti { font-size: 1.5rem; }
+.tile b { font-family: var(--font-display); font-weight: 400; font-size: 1.15rem; }
+.tile span:last-child { font-size: .84rem; color: var(--muted); line-height: 1.35; }
+.tf-card { text-align: center; font-size: 1.2rem; font-weight: 700; padding: 30px 18px; line-height: 1.45; }
+.tf-btns { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.order-list { display: grid; gap: 8px; }
+.order-item { display: grid; grid-template-columns: 28px minmax(0, 1fr) auto; gap: 8px; align-items: center; background: var(--surface); border: 1.5px solid var(--line); border-radius: 12px; padding: 8px 10px; line-height: 1.35; }
+.order-item .on { font-weight: 800; color: var(--accent); text-align: center; }
+.order-item .mv { display: flex; gap: 4px; }
+.order-item .mv button { width: 40px; height: 40px; border-radius: 10px; border: 1.5px solid var(--line); background: var(--surface-2); font-weight: 800; }
+.order-item .mv button[disabled] { opacity: .3; }
+.order-item.good { border-color: var(--ok); background: var(--ok-soft); }
+.order-item.badp { border-color: var(--bad); background: var(--bad-soft); }
+.match-grid { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 8px; }
+.match-grid .stack { gap: 8px; }
+.match-grid button { border: 1.5px solid var(--line); background: var(--surface); border-radius: 12px; padding: 10px; min-height: 56px; font-size: .92rem; font-weight: 600; line-height: 1.3; overflow-wrap: anywhere; }
+.match-grid button.sel { border-color: var(--accent); background: var(--accent-soft); }
+.match-grid button.done { border-color: var(--ok); background: var(--ok-soft); opacity: .7; }
+.match-grid button.err { border-color: var(--bad); background: var(--bad-soft); }
+.flip { perspective: 1000px; border: 0; background: none; padding: 0; width: 100%; }
+.flip-in { position: relative; min-height: 240px; transition: transform .5s; transform-style: preserve-3d; }
+.flip.on .flip-in { transform: rotateY(180deg); }
+.face { position: absolute; inset: 0; backface-visibility: hidden; -webkit-backface-visibility: hidden; border-radius: 20px; padding: 24px; display: grid; place-items: center; text-align: center; font-size: 1.25rem; font-weight: 700; line-height: 1.4; box-shadow: var(--shadow); }
+.face.front { background: var(--surface); border: 2px solid var(--paper-rule); }
+.face.back { background: var(--accent); color: var(--on-accent); transform: rotateY(180deg); font-size: 1.05rem; font-weight: 600; }
+.face small { display: block; font-size: .72rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+.face small.hint-s { margin: 12px 0 0; }
+
+/* Crucigrama */
+.cw-wrap { overflow-x: auto; padding: 4px 0 8px; }
+.cw { display: grid; gap: 2px; width: max-content; margin: 0 auto; }
+.cw-x { width: var(--cw); height: var(--cw); }
+.cw-c { position: relative; width: var(--cw); height: var(--cw); background: var(--surface); border: 1.5px solid var(--paper-rule); border-radius: 4px; display: block; }
+.cw-c i { position: absolute; top: 0; left: 2px; font-size: 8px; font-style: normal; font-weight: 800; color: var(--muted); line-height: 1; pointer-events: none; }
+.cw-c input { width: 100%; height: 100%; border: 0; background: transparent; text-align: center; font-weight: 800; font-size: .82rem; padding: 4px 0 0; text-transform: uppercase; color: var(--ink); caret-color: var(--accent); }
+.cw-c input:focus { outline: none; }
+.cw-c:focus-within { border-color: var(--accent); box-shadow: 0 0 0 2px var(--accent); z-index: 1; }
+.cw-c.hl { background: var(--accent-soft); }
+.cw-c.good { background: var(--ok-soft); border-color: var(--ok); }
+.cw-c.bad { background: var(--bad-soft); border-color: var(--bad); }
+.cw-now { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; padding: 12px 14px; font-size: .95rem; }
+.clues { display: grid; gap: 6px; }
+.clue { display: grid; grid-template-columns: 28px minmax(0,1fr); gap: 8px; text-align: left; border: 0; background: var(--surface-2); border-radius: 10px; padding: 8px 10px; line-height: 1.35; font-size: .93rem; }
+.clue b { color: var(--accent); }
+.clue.on { outline: 2px solid var(--accent); }
+.clue.solved { opacity: .55; text-decoration: line-through; }
+@media (min-width: 560px) { :root { --cw: 32px; } .cw-c input { font-size: 1rem; } .cw-c i { font-size: 9px; } }
+
+/* Videos y avance */
+.vrow { grid-template-columns: minmax(0,1fr) auto; align-items: center; gap: 12px; }
+@media (max-width: 420px) { .vrow { grid-template-columns: minmax(0,1fr); } }
+.trust { background: var(--accent-soft); box-shadow: none; }
+.link { font-weight: 700; }
+.stats { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 10px; }
+.stat { background: var(--surface); border-radius: var(--r); padding: 14px 12px; box-shadow: var(--shadow); display: grid; gap: 2px; min-width: 0; }
+.stat b { font-family: var(--font-display); font-weight: 400; font-size: 2rem; color: var(--accent); line-height: 1; }
+.stat span { font-size: .78rem; color: var(--muted); line-height: 1.3; }
+.evidence { border: 2px solid var(--ok); box-shadow: none; }
+.unitbar { display: grid; gap: 5px; }
+
+/* Navegación */
+.tabbar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 20; background: var(--surface); border-top: 1px solid var(--line); padding-bottom: env(safe-area-inset-bottom, 0px); padding-left: max(8px, env(safe-area-inset-left, 0px)); padding-right: max(8px, env(safe-area-inset-right, 0px)); }
+.tabbar-in { max-width: 720px; margin: 0 auto; display: grid; grid-template-columns: repeat(6, minmax(0,1fr)); }
+.tab { border: 0; background: none; padding: 8px 0 9px; display: grid; justify-items: center; gap: 2px; font-size: .66rem; font-weight: 700; color: var(--muted); min-height: 58px; }
+.tab svg { width: 24px; height: 24px; }
+.tab.on { color: var(--accent); }
+.toast { position: fixed; left: 50%; transform: translateX(-50%); bottom: calc(78px + env(safe-area-inset-bottom, 0px)); z-index: 50; background: var(--ink); color: var(--bg); border-radius: 999px; padding: 10px 18px; font-weight: 700; font-size: .92rem; box-shadow: var(--shadow); max-width: calc(100% - 32px); text-align: center; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+
+/* v2 · guía, lectura guiada, examen, glosario, hoja interactiva */
+.guide { border: 2px solid var(--accent); }
+.secmap { display: grid; gap: 8px; }
+.sec { display: grid; grid-template-columns: 40px minmax(0,1fr); gap: 12px; align-items: start; text-align: left; border: 1.5px solid var(--line); background: var(--surface); border-radius: 14px; padding: 12px; line-height: 1.4; }
+.sec b { font-family: var(--font-display); font-weight: 400; font-size: 1.15rem; color: var(--accent); }
+.sec span span { font-size: .9rem; }
+.sec small { color: var(--muted); font-size: .8rem; }
+.sec-ic { width: 40px; height: 40px; border-radius: 12px; background: var(--accent-soft); color: var(--accent); display: grid; place-items: center; }
+.sec-ic svg { width: 22px; height: 22px; }
+.howto { background: var(--accent-soft); box-shadow: none; }
+.phase-legend { display: grid; gap: 6px; font-size: .9rem; }
+.phase-legend span b { color: var(--accent); margin-right: 6px; }
+.phasebar { display: grid; grid-template-columns: repeat(5, minmax(0,1fr)); gap: 4px; }
+.ph { border: 0; border-top: 5px solid var(--surface-2); background: none; padding: 6px 0 0; font-size: .7rem; font-weight: 800; color: var(--muted); text-align: left; letter-spacing: .02em; }
+.ph.on { border-top-color: var(--accent); color: var(--accent); }
+.ph.cur { border-top-color: var(--accent-2); color: var(--ink); }
+.plan { display: grid; gap: 6px; }
+.plan-r { display: grid; grid-template-columns: 26px minmax(0,1fr) auto; gap: 10px; align-items: center; background: var(--surface-2); border-radius: 12px; padding: 9px 12px; }
+.plan-r small { display: block; color: var(--muted); font-size: .85rem; line-height: 1.35; }
+.tips { background: var(--warn-soft); box-shadow: none; }
+.tips h2 { color: var(--warn); }
+.frag { border-left: 5px solid var(--paper-rule); }
+.frag.fdone { border-left-color: var(--ok); }
+.fr-where { background: var(--surface-2); border-radius: 12px; padding: 10px 12px; display: grid; gap: 4px; font-size: .95rem; font-style: italic; }
+.lab { font-style: normal; font-size: .68rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); margin-right: 6px; }
+.fr-look { font-size: 1.02rem; }
+.case-s { background: var(--surface-2); border-radius: 12px; padding: 12px; line-height: 1.55; }
+.chip.fmt { vertical-align: 2px; margin-right: 4px; }
+.opt.picked { border-color: var(--accent); background: var(--accent-soft); }
+.opt.picked .ov { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+.qnav { display: grid; grid-template-columns: repeat(auto-fill, minmax(34px, 1fr)); gap: 5px; }
+.qnav button { height: 34px; border-radius: 8px; border: 1.5px solid var(--line); background: var(--surface); font-size: .78rem; font-weight: 700; }
+.qnav button.ans { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); }
+.qnav button.cur { outline: 2px solid var(--ink); }
+.exrow { grid-template-columns: minmax(0,1fr) auto; align-items: center; }
+.exn { font-family: var(--font-display); font-weight: 400; font-size: 1.3rem; }
+.review-item .yo { color: var(--bad); }
+.linkbtn { border: 0; background: none; color: var(--accent); font-weight: 700; padding: 2px 0; text-align: left; justify-self: start; }
+.gloss { display: grid; gap: 8px; }
+.gterm { background: var(--surface); border-radius: 14px; padding: 14px; display: grid; gap: 6px; border: 1.5px solid var(--line); }
+.gterm > .spread b { font-family: var(--font-display); font-weight: 400; font-size: 1.2rem; color: var(--accent); }
+.gex { font-size: .92rem; color: var(--muted); }
+.vrow { display: grid; gap: 10px; }
+.vq { font-size: .92rem; }
+.sel { user-select: all; -webkit-user-select: all; color: var(--accent); font-weight: 700; }
+.url { font-weight: 400; overflow-wrap: anywhere; font-size: .78rem; }
+.tl-wrap { overflow-x: auto; padding-bottom: 6px; }
+.tl { display: flex; min-width: max-content; }
+.tl-i { width: 92px; border: 0; background: none; display: grid; justify-items: center; gap: 4px; text-align: center; position: relative; padding: 0 4px; align-content: start; }
+.tl-i::before { content: ""; position: absolute; top: calc(1.3em + 9px); left: 0; right: 0; height: 3px; background: var(--paper-rule); }
+.tl-y { font-size: .74rem; font-weight: 800; color: var(--accent); min-height: 1.3em; white-space: nowrap; }
+.tl-d { width: 16px; height: 16px; border-radius: 50%; background: var(--surface); border: 3px solid var(--accent); z-index: 1; }
+.tl-i.on .tl-d { background: var(--accent); transform: scale(1.3); }
+.tl-t { font-size: .74rem; font-weight: 700; line-height: 1.2; }
+.tl-i.on .tl-t { color: var(--accent); }
+.tl-card { background: var(--accent-soft); border-radius: 14px; padding: 14px; display: grid; gap: 8px; }
+.rvt th[scope=row] { background: var(--surface-2); color: var(--ink); text-transform: none; letter-spacing: 0; font-size: .85rem; vertical-align: top; }
+.rv { width: 100%; min-height: 44px; border: 1.5px dashed var(--accent); background: var(--accent-soft); border-radius: 10px; padding: 8px; text-align: left; font-size: .88rem; line-height: 1.35; color: var(--ink); }
+.rv span { color: var(--accent); font-weight: 700; font-size: .78rem; }
+.rv.open { border-style: solid; border-color: var(--line); background: var(--surface); }
+.era { display: grid; gap: 6px; padding-top: 10px; border-top: 1px solid var(--line); }
+.era-g { display: grid; grid-template-columns: 150px minmax(0,1fr); gap: 6px 10px; align-items: center; }
+.era-g .lab { margin: 0; }
+@media (max-width: 480px) { .era-g { grid-template-columns: minmax(0,1fr); } }
+.clue-r { display: flex; gap: 10px; align-items: flex-start; font-size: 1.05rem; }
+.vt { font-family: var(--font-display); font-weight: 400; font-size: 1.25rem; }
+.vid { display: grid; gap: 8px; border-top: 1px solid var(--line); padding-top: 12px; }
+.vid > .vid-play + .stack, .vid { grid-template-columns: minmax(0,1fr); }
+.vid-play { display: none; }
+.ojo { background: var(--warn-soft); border-radius: 10px; padding: 8px 10px; }
+.ok-n { color: var(--ok); font-weight: 700; }
+
+
+/* ═══ v3 · Capítulo 3 · ajustes por el cuestionario de Carmen ═══ */
+body { font-size: 18px; }
+.app { padding-block: 18px calc(110px + env(safe-area-inset-bottom, 0px)); }
+.tabbar-in { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.tab { font-size: .78rem; min-height: 62px; }
+.btn { min-height: 56px; font-size: 1rem; }
+.btn.small { min-height: 44px; }
+.btn.tall { flex-direction: column; gap: 2px; padding-block: 12px; }
+.btn.tall small { font-weight: 400; opacity: .85; }
+.btn.danger { color: var(--bad); border-color: var(--bad); }
+.tight-6 { gap: 6px; }
+
+/* Inicio: un solo botón grande */
+.home { gap: 14px; }
+.btn.big { flex-direction: column; gap: 4px; min-height: 92px; border-radius: 22px; padding: 16px 20px; box-shadow: 0 6px 18px rgba(194, 24, 91, .28); }
+.big-t { font-family: var(--font-display); font-weight: 400; font-size: 1.7rem; line-height: 1.1; }
+.big-s { font-weight: 400; font-size: .92rem; opacity: .95; line-height: 1.35; }
+details.more { background: var(--surface); border-radius: var(--r); border: 1.5px solid var(--line); }
+details.more > summary { list-style: none; cursor: pointer; padding: 14px 18px; font-weight: 700; color: var(--muted); display: flex; justify-content: space-between; align-items: center; min-height: 56px; }
+details.more > summary::-webkit-details-marker { display: none; }
+details.more > summary::after { content: "▾"; transition: transform .2s; }
+details.more[open] > summary::after { transform: rotate(180deg); }
+details.more > .stack { padding: 0 12px 12px; }
+.mission-l { min-height: 54px; color: var(--ink); }
+.motiv-s { font-family: var(--font-display); color: var(--accent); font-size: 1.1rem; line-height: 1.3; padding: 4px 8px; }
+.hero h1 { font-size: 2.1rem; }
+
+/* Modo enfocado */
+.focus .ftop { position: sticky; top: 0; z-index: 15; background: var(--bg); display: flex; gap: 12px; align-items: center; padding: calc(10px + env(safe-area-inset-top, 0px)) max(16px, env(safe-area-inset-right, 0px)) 8px max(16px, env(safe-area-inset-left, 0px)); max-width: 720px; margin: 0 auto; }
+.xbtn { flex: none; border: 1.5px solid var(--line); background: var(--surface); color: var(--ink); border-radius: 999px; padding: 8px 14px; min-height: 44px; font-weight: 700; }
+.fstep { display: grid; min-width: 0; line-height: 1.25; }
+.fstep b { font-size: .98rem; }
+.fstep span { font-size: .82rem; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.bar.thin { height: 6px; max-width: 688px; margin: 0 auto; }
+.focus .bar.thin { margin-inline: max(16px, calc((100% - 688px) / 2)); }
+.focus-main { padding-top: 14px; }
+.fbot { position: fixed; left: 0; right: 0; bottom: 0; z-index: 20; background: var(--surface); border-top: 1px solid var(--line); padding: 10px max(16px, env(safe-area-inset-right, 0px)) calc(10px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); display: flex; gap: 10px; align-items: center; justify-content: center; }
+.fbot > * { max-width: 520px; }
+.back-l { flex: none; border: 0; background: none; color: var(--muted); font-weight: 700; padding: 10px 6px; min-height: 48px; }
+.back-l[disabled] { opacity: .3; }
+.btn.big-n { flex: 1; min-height: 60px; font-size: 1.1rem; border-radius: 18px; }
+.btn.big-n.wide { width: 100%; }
+.sheet .body { font-size: 1.1rem; }
+.sheet > .say.wide { justify-self: stretch; }
+
+/* Botón de voz */
+.say { border: 2px solid var(--accent); background: var(--accent-soft); color: var(--accent); border-radius: 999px; padding: 8px 16px; min-height: 48px; font-weight: 800; display: inline-flex; gap: 8px; align-items: center; justify-content: center; justify-self: start; max-width: 100%; }
+.say.wide { width: 100%; min-height: 56px; font-size: 1.05rem; }
+.say .ic { font-size: 1.2rem; }
+.say.on { background: var(--accent); color: var(--on-accent); }
+.fb .say, .model .say, .gterm .say { justify-self: start; }
+
+/* Palabras difíciles */
+.hw { border: 0; background: none; padding: 0; margin: 0; font: inherit; color: inherit; cursor: pointer; text-decoration: underline dotted 2px var(--accent); text-underline-offset: 4px; display: inline; line-height: inherit; }
+.hw-q, .hw-demo .hw-q { display: inline-grid; place-items: center; width: 1.05em; height: 1.05em; margin-left: 2px; border-radius: 50%; background: var(--accent); color: var(--on-accent); font-size: .62em; font-weight: 800; vertical-align: .55em; text-decoration: none; }
+.hw-demo { text-decoration: underline dotted 2px var(--accent); text-underline-offset: 4px; }
+.scrim { position: fixed; inset: 0; background: rgba(20, 5, 12, .45); z-index: 40; }
+.bsheet { position: fixed; left: 0; right: 0; bottom: 0; z-index: 41; background: var(--surface); border-radius: 22px 22px 0 0; padding: 10px 20px calc(20px + env(safe-area-inset-bottom, 0px)); display: grid; gap: 10px; max-width: 720px; margin: 0 auto; box-shadow: 0 -8px 30px rgba(0, 0, 0, .2); max-height: 80vh; overflow-y: auto; }
+.grab { width: 44px; height: 5px; border-radius: 99px; background: var(--line); justify-self: center; margin-bottom: 6px; }
+.bsheet h2 { color: var(--accent); font-size: 1.6rem; }
+.modal { position: fixed; z-index: 41; left: 50%; top: 50%; transform: translate(-50%, -50%); width: min(420px, calc(100% - 32px)); background: var(--surface); border-radius: 22px; padding: 24px 20px; display: grid; gap: 12px; text-align: center; box-shadow: var(--shadow); }
+.big-emoji { font-size: 3rem; line-height: 1; }
+.toast { bottom: calc(96px + env(safe-area-inset-bottom, 0px)); }
+
+/* Cuadro sinóptico con llaves */
+.sn-wrap { padding: 4px 0; }
+.sn { display: flex; align-items: center; }
+.sn-root { flex: none; background: var(--accent); color: var(--on-accent); font-family: var(--font-display); font-size: 1.08rem; line-height: 1.2; padding: 10px 12px; border-radius: 12px; max-width: 140px; text-align: center; }
+.sn-brace { flex: none; align-self: stretch; width: 14px; margin: 4px 6px 4px 12px; border: 3px solid var(--accent); border-right: 0; border-radius: 16px 0 0 16px; position: relative; }
+.sn-brace::before { content: ""; position: absolute; left: -12px; top: 50%; width: 10px; height: 3px; background: var(--accent); transform: translateY(-50%); }
+.sn-list { display: grid; gap: 12px; min-width: 0; flex: 1; }
+.sn-br { display: flex; align-items: center; min-width: 0; }
+.sn-bt { flex: none; width: 130px; font-weight: 800; color: var(--accent); background: var(--accent-soft); border-radius: 10px; padding: 7px 10px; line-height: 1.25; font-size: .95rem; }
+.sn-brace.sm { width: 10px; margin: 2px 4px 2px 10px; border-width: 2px; border-radius: 10px 0 0 10px; }
+.sn-brace.sm::before { left: -9px; width: 7px; height: 2px; }
+.sn-kids { list-style: none; margin: 0; padding: 0; display: grid; gap: 3px; font-size: .94rem; line-height: 1.32; min-width: 0; flex: 1; }
+.sn-kids li { padding: 1px 0; }
+@media (max-width: 560px) {
+  .sn { display: grid; grid-template-columns: auto minmax(0, 1fr); }
+  .sn-root { grid-column: 1 / -1; justify-self: start; max-width: none; text-align: left; margin-bottom: 4px; }
+  .sn > .sn-brace { margin: 2px 8px 2px 14px; }
+  .sn > .sn-brace::before { left: -3px; top: -8px; width: 3px; height: 8px; transform: none; }
+  .sn-br { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 4px 0; }
+  .sn-bt { grid-column: 1 / -1; width: auto; justify-self: start; }
+  .sn-br > .sn-brace.sm { margin-left: 10px; }
+}
+
+/* Estación */
+.callout.trap > summary { cursor: pointer; font-weight: 800; color: var(--bad); min-height: 44px; display: flex; align-items: center; }
+.callout.trap[open] > summary { margin-bottom: 4px; }
+.trick { background: var(--accent-soft); border-radius: 10px; padding: 10px 12px; margin-top: 8px; }
+.model p { line-height: 1.55; }
+.done-card { background: var(--accent-soft); box-shadow: none; }
+.plan-r > span { font-size: 1.3rem; }
+.tile.fav { border: 2px solid var(--accent); }
+.audio-row { grid-template-columns: minmax(0, 1fr) auto; align-items: center; }
+@media (max-width: 400px) { .audio-row { grid-template-columns: minmax(0, 1fr); } }
+.lrow .tt { display: block; }
+.lrow .meta { display: block; }
+
+/* Recorrido */
+.tour-s { justify-items: center; }
+.tour-s .body { text-align: center; }
+.phone { width: min(280px, 100%); border: 3px solid var(--line); border-radius: 26px; padding: 16px 14px; background: var(--bg); display: grid; gap: 10px; text-align: left; font-size: .9rem; }
+.m-hero { background: var(--accent); color: var(--on-accent); border-radius: 14px; padding: 12px; font-family: var(--font-display); font-size: 1.1rem; }
+.m-btn { background: var(--accent); color: var(--on-accent); border-radius: 16px; padding: 12px; text-align: center; font-weight: 800; display: grid; }
+.m-btn small { font-weight: 400; }
+.m-line { border: 1.5px solid var(--line); border-radius: 999px; padding: 8px; text-align: center; font-size: .82rem; color: var(--muted); }
+.m-steps { display: grid; grid-template-columns: repeat(5, 1fr); gap: 4px; text-align: center; font-size: .68rem; font-weight: 700; color: var(--muted); }
+.m-steps span { border-top: 5px solid var(--surface-2); padding-top: 4px; }
+.m-steps span.on { border-top-color: var(--accent); color: var(--accent); }
+.m-sheet { background: var(--surface); border-radius: 14px; padding: 12px; box-shadow: var(--shadow); }
+.pulse { animation: pulse 1.6s ease-in-out infinite; }
+@keyframes pulse { 0%, 100% { box-shadow: 0 0 0 0 rgba(224, 74, 134, .55); } 50% { box-shadow: 0 0 0 10px rgba(224, 74, 134, 0); } }
+.tour .fbot .btn.line { flex: none; min-height: 56px; }
+
+/* Tablas que caben en el celular */
+.tbl { min-width: 0; }
+.tbl td, .tbl th { overflow-wrap: anywhere; hyphens: auto; }
+@media (max-width: 480px) { .tbl { font-size: .86rem; } .tbl th, .tbl td { padding: 8px 7px; } }
+
+.cw { --cwmax: 24px; }
+@media (min-width: 560px) { .cw { --cwmax: 32px; } }
+
+</style>
+</head>
+<body>
+<div id="app"><p style="padding:24px">Cargando tu plataforma…</p></div>
+<noscript><p style="padding:24px">Activa JavaScript para usar la plataforma.</p></noscript>
+<script>
+const V = {
+  line(items) {
+    return `<div class="vis line-wrap"><div class="line">${items.map((it) =>
+      `<div class="line-item"><div class="line-age">${it.a}</div><div class="line-dot"></div><div class="line-t">${it.t}</div>${it.s ? `<div class="line-s">${it.s}</div>` : ''}</div>`).join('')}</div></div>`;
+  },
+  flow(items) {
+    return `<div class="vis flow">${items.map((it, i) =>
+      `<div class="flow-step"><span class="flow-n">${i + 1}</span><div><b>${it.t}</b>${it.s ? `<small>${it.s}</small>` : ''}</div></div>`).join('<div class="flow-arrow" aria-hidden="true">↓</div>')}</div>`;
+  },
+  tbl(head, rows) {
+    return `<div class="vis tbl-wrap"><table class="tbl"><thead><tr>${head.map(h => `<th>${h}</th>`).join('')}</tr></thead><tbody>${rows.map(r => `<tr>${r.map((c, i) => i === 0 ? `<td><b>${c}</b></td>` : `<td>${c}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
+  },
+  vs(a, b) {
+    const col = c => `<div class="vs-col"><div class="vs-h">${c.t}</div><ul>${c.items.map(x => `<li>${x}</li>`).join('')}</ul></div>`;
+    return `<div class="vis vs">${col(a)}<div class="vs-mid">vs</div>${col(b)}</div>`;
+  },
+  pairs(list) {
+    return `<div class="vis pairs">${list.map(p => `<div class="pair"><b>${p[0]}</b><span>${p[1]}</span></div>`).join('')}</div>`;
+  },
+  /* Cuadro sinóptico con llaves: raíz { ramas { hojas */
+  sinop(root, br) {
+    const kids = k => `<ul class="sn-kids">${k.map(x => `<li>${x}</li>`).join('')}</ul>`;
+    return `<div class="vis sn-wrap"><div class="sn"><div class="sn-root">${root}</div><div class="sn-brace" aria-hidden="true"></div><div class="sn-list">${br.map(b =>
+      `<div class="sn-br"><div class="sn-bt">${b.t}</div><div class="sn-brace sm" aria-hidden="true"></div>${kids(b.kids)}</div>`).join('')}</div></div></div>`;
+  },
+  tree(root, kids) { return V.sinop(root, kids.map(k => ({ t: k.t, kids: k.s ? [k.s] : [] }))); },
+  book(page, html) {
+    return `<div class="vis bookq"><div class="bookq-h">Lo que dice el libro · pág. ${page}</div><div class="bookq-b">${html}</div></div>`;
+  },
+  now(html) {
+    return `<div class="vis nowbox"><div class="bookq-h">Dato actual · no viene en el libro (es de 2014)</div><div class="bookq-b">${html}</div></div>`;
+  }
+};
+
+
+/* ═══════════ CONTENIDO · Díaz-Aranda, Enrique, Lecciones de derecho penal para el nuevo sistema de justicia en México, UNAM-IIJ, 2014. Segunda parte, Capítulo sexto «Antijuridicidad» (págs. 125 a 129). ═══════════ */
+const BOOK = {
+  title: 'Lecciones de derecho penal para el nuevo sistema de justicia en México',
+  author: 'Enrique Díaz-Aranda',
+  pub: 'UNAM, Instituto de Investigaciones Jurídicas · STRAF, 2014',
+  chapter: 'Segunda parte · Capítulo sexto: «Antijuridicidad» (págs. 125 a 129)',
+  url: 'http://biblio.juridicas.unam.mx/libros/libro.htm?l=3805'
+};
+const STUDENT = { name: 'Carmen' };
+const CHAP = {
+  n: 11, word: 'once', short: 'Antijuridicidad', pages: '125 a 129', key: 'carmen-penal-cap11-v1',
+  exA: [0, 2, 4], exB: [1, 3, 5],
+  tourRead: ['Solo después de haber confirmado que la conducta es típica', 'si existe alguna causa que la justifique.'],
+  tourWord: ['Lo típico y antijurídico es un ', 'injusto', '.', 'Injusto', 'Conducta típica que contradice a todo el orden jurídico…']
+};
+
+/* ═══════════ ESTACIONES ═══════════ */
+const LESSONS = [];
+
+LESSONS.push({
+  id: 'puente', icon: '🧭', era: 'Antes de empezar', title: 'El segundo escalón', pages: '125', mins: 6, bridge: true,
+  goal: 'Ubicar la antijuridicidad dentro del delito y recordar qué viene después.',
+  steps: [
+    { h: 'Imagina que…', t: 'El delito es como una escalera de <b>tres escalones</b>. Ya subiste el primero, la <b>conducta-típica</b>, con sus tres vasos. Hoy subes el segundo: la <mark>antijuridicidad</mark>. Si no se sube un escalón, ya no se puede pasar al siguiente.',
+      v: () => V.flow([{ t: 'Conducta-típica', s: '¿Está prohibida por la ley penal? (ya lo estudiaste)' }, { t: 'Antijuridicidad', s: '¿Contradice a todo el orden jurídico o hay una justificación? (hoy)' }, { t: 'Culpabilidad', s: '¿Se le puede reprochar a la persona? (después)' }]) },
+    { h: 'La pregunta de hoy', t: 'Una conducta puede estar prohibida y, aun así, estar <b>justificada</b> por sus circunstancias. El ejemplo más claro es la <b>legítima defensa</b>. <mark>Si hay una causa de justificación, el delito desaparece</mark> y ya no se llega a la culpabilidad.' }
+  ],
+  sinop: { root: 'El segundo escalón', br: [
+    { t: 'Escalón 1', kids: ['Conducta-típica'] },
+    { t: 'Escalón 2 (hoy)', kids: ['Antijuridicidad', '¿Hay justificación?'] },
+    { t: 'Escalón 3', kids: ['Culpabilidad'] },
+    { t: 'Regla', kids: ['Si falta un escalón, no hay delito'] }] },
+  trap: ['La antijuridicidad se analiza <b>solo después</b> de confirmar la conducta-típica.', 'Si la conducta está justificada, <b>no se pasa</b> a la culpabilidad.'],
+  trick: '<b>«Típica, antijurídica y culpable: tres escalones»</b>.',
+  explain: { q: '¿Dónde está la antijuridicidad dentro del delito?', model: 'El delito tiene tres escalones: conducta-típica, antijuridicidad y culpabilidad. La antijuridicidad es el segundo: después de confirmar que la conducta está prohibida por la ley penal, se revisa si contradice a todo el orden jurídico o si hay una causa que la justifique, como la legítima defensa. Si está justificada, el delito desaparece y ya no se analiza la culpabilidad.', keys: ['Tres escalones', 'Segundo escalón', '¿Hay justificación?', 'Legítima defensa', 'No se pasa a la culpabilidad'] }
+});
+
+LESSONS.push({
+  id: 'injusto', icon: '⚖️', era: 'I · Concepción general', title: 'El injusto y el ilícito justificado', pages: '125–126', mins: 10,
+  goal: 'Entender qué es el injusto, qué es un ilícito justificado y por qué la tipicidad es un indicio de la antijuridicidad.',
+  steps: [
+    { h: 'Imagina que…', t: 'Matar está descrito en el tipo de homicidio (art. 302). Pero si alguien mata <b>en legítima defensa</b> (art. 15, fr. IV), su conducta es típica, pero está <mark>justificada</mark>, y el delito desaparece.' },
+    { h: 'Dos palabras clave', t: '',
+      v: () => V.vs({ t: 'Injusto', items: ['Conducta <b>típica y antijurídica</b>', 'No hay ninguna justificación', 'Falta ver la culpabilidad'] }, { t: 'Ilícito justificado', items: ['Conducta <b>típica</b>, pero con una causa de justificación', 'No es antijurídica', 'No hay delito'] }) },
+    { h: 'Objeto y valoración', t: 'El tipo describe la conducta (el <b>objeto</b>); la antijuridicidad es la <b>valoración</b> de esa conducta frente al derecho. Como casi todas las conductas típicas <b>pocas veces</b> están justificadas, se dice que <mark>la tipicidad es un indicio de la antijuridicidad</mark>: si es típica, probablemente también es antijurídica, pero hay que revisarlo.' }
+  ],
+  sinop: { root: 'Concepción general', br: [
+    { t: 'Injusto', kids: ['Típica + antijurídica'] },
+    { t: 'Ilícito justificado', kids: ['Típica, pero justificada', 'No hay delito'] },
+    { t: 'Objeto y valoración', kids: ['El tipo describe', 'La antijuridicidad valora'] },
+    { t: 'Indicio', kids: ['La tipicidad es indicio de la antijuridicidad'] }] },
+  trap: ['Una conducta típica justificada es un <b>ilícito justificado</b>, no un injusto.', 'La tipicidad es solo un <b>indicio</b>: no prueba por sí sola la antijuridicidad.'],
+  trick: '<b>«Típica + sin justificación = injusto»</b>.',
+  explain: { q: '¿Qué es el injusto y qué es un ilícito justificado?', model: 'El injusto es la conducta típica y antijurídica: está prohibida por la ley penal y no hay ninguna causa que la justifique. El ilícito justificado es una conducta típica que sí tiene una causa de justificación, como matar en legítima defensa; por eso no es antijurídica y no hay delito. El tipo describe la conducta y la antijuridicidad la valora frente al derecho. Como casi nunca hay justificación, se dice que la tipicidad es un indicio de la antijuridicidad.', keys: ['Injusto: típica y antijurídica', 'Ilícito justificado', 'Legítima defensa', 'Objeto y valoración', 'Indicio'] }
+});
+
+LESSONS.push({
+  id: 'negativos', icon: '🦟', era: 'I · La postura del autor', title: 'Justificar no es permitir', pages: '126–127', mins: 10,
+  goal: 'Conocer por qué el autor rechaza la teoría de los elementos negativos del tipo y cómo deben aplicarse las causas de justificación.',
+  steps: [
+    { h: 'Imagina que…', t: '¿Es lo mismo matar a una persona en legítima defensa que matar a un mosquito o ir al cine con la novia? Para el autor, <b>claro que no</b>. Matar sigue estando prohibido; <mark>solo excepcionalmente se justifica</mark>.' },
+    { h: 'Dos posturas', t: '',
+      v: () => V.vs({ t: 'Teoría de los elementos negativos del tipo', items: ['La justificación <b>excluye la prohibición</b>', 'El hecho justificado es permitido y lícito', 'Algunas tesis de jurisprudencia lo dicen así'] }, { t: 'El autor', items: ['La justificación <b>no quita la prohibición general</b>, solo la justifica', 'Si no, se igualaría lo que es incomparable', 'Eso iría contra la justicia material'] }) },
+    { h: 'Solo lo que dice la ley', t: 'Las causas de justificación tienen una <b>función político-criminal</b>: resolver casos en que las circunstancias obligan a justificar una conducta prohibida. Por eso:',
+      v: () => V.flow([{ t: 'Siempre deben estar en la ley', s: 'No se admiten causas de justificación «supralegales»' }, { t: 'Hay que comprobar todos sus elementos', s: 'Sin agregar ni quitar requisitos' }, { t: 'No se exigen ánimos que la ley no pide', s: 'Los llamados «elementos subjetivos del injusto»' }]) },
+    { h: '¡Ni más ni menos!', t: 'Si alguien defendió sus bienes con <b>ánimo de venganza</b> y no de defensa, pero cumplió todos los requisitos de la legítima defensa (art. 15, fr. IV), <mark>su conducta se justifica</mark>, porque esa fracción no pide ningún ánimo. Solo el legislador decide cuándo se justifica una conducta: hay que aplicar sus requisitos, <b>¡ni más ni menos!</b>' }
+  ],
+  sinop: { root: 'Justificar no es permitir', br: [
+    { t: 'Elementos negativos', kids: ['Justificado = permitido', 'El autor lo rechaza'] },
+    { t: 'El autor', kids: ['Sigue prohibida, pero se justifica', 'Legítima defensa ≠ matar un mosquito'] },
+    { t: 'En la ley', kids: ['No hay supralegales', 'Todos los requisitos'] },
+    { t: 'Ánimos', kids: ['No se exigen si la ley no los pide', 'Venganza: igual se justifica'] }] },
+  trap: ['Para el autor, la conducta justificada <b>sigue prohibida en general</b>; no es igual a una conducta permitida.', 'No existen causas de justificación <b>supralegales</b>.', 'El ánimo de venganza <b>no impide</b> la legítima defensa si se cumplen sus requisitos.'],
+  trick: '<b>«Ni más ni menos de lo que dice la ley»</b>.',
+  explain: { q: '¿Por qué el autor dice que justificar no es lo mismo que permitir?', model: 'La teoría de los elementos negativos del tipo dice que la justificación excluye la prohibición, así que el hecho justificado sería permitido. El autor lo rechaza: matar sigue estando prohibido y solo excepcionalmente se justifica; si no, matar en legítima defensa sería igual que matar un mosquito o ir al cine, y eso va contra la justicia material. Además, las causas de justificación deben estar en la ley, sin supralegales, y hay que comprobar todos sus requisitos, ni más ni menos; por eso no se exigen ánimos que la ley no pide, como el de defensa.', keys: ['Elementos negativos del tipo', 'Sigue prohibida', 'El mosquito', 'Deben estar en la ley', 'Sin supralegales', 'Ni más ni menos'] }
+});
+
+LESSONS.push({
+  id: 'aspectos', icon: '🏛️', era: 'I.1 · Aspectos', title: 'Formal y material', pages: '127–128', mins: 10,
+  goal: 'Distinguir la antijuridicidad formal de la material y conocer la idea de Liszt sobre el conflicto de bienes.',
+  steps: [
+    { h: 'Imagina que…', t: 'El orden jurídico es como un edificio con muchos pisos: el civil, el laboral, el fiscal, el penal… Cada piso regula lo suyo, pero <mark>todos deben estar de acuerdo entre sí</mark>. La antijuridicidad mira la conducta desde <b>todo el edificio</b>, no solo desde el piso penal.' },
+    { h: 'Dos aspectos', t: '',
+      v: () => V.vs({ t: 'Formal', items: ['La conducta no solo está prohibida por el derecho penal', 'Además, <b>contradice a todo el sistema jurídico</b>', 'Es un «injusto»'] }, { t: 'Material', items: ['La conducta <b>lesionó o puso en peligro</b> un bien fundamental', 'La sociedad la ve como <b>nociva e injustificada</b>', 'Por eso es injusta'] }) },
+    { h: 'El conflicto de bienes', t: 'A veces <b>uno de dos bienes tiene que perderse</b>. Von Liszt dijo que, en ese conflicto, se debe sacrificar el interés de <b>menor</b> importancia para salvar el superior: esa lesión sería legítima porque responde a los fines del orden jurídico.',
+      v: () => V.book('128', 'El autor toma esta idea <b>con reserva</b>: en México, la legítima defensa del hogar puede justificar incluso la muerte del intruso, aunque la vida vale más que los bienes. Basta con que se cumplan los requisitos del párrafo segundo de la fracción IV del artículo 15.') }
+  ],
+  sinop: { root: 'Aspectos de la antijuridicidad', br: [
+    { t: 'Formal', kids: ['Contradice todo el orden jurídico'] },
+    { t: 'Material', kids: ['Lesión o peligro a un bien', 'Nociva e injustificada'] },
+    { t: 'Liszt', kids: ['Sacrificar el bien menor', 'Para salvar el superior'] },
+    { t: 'Reserva del autor', kids: ['Legítima defensa del hogar', 'Basta cumplir los requisitos'] }] },
+  trap: ['La antijuridicidad <b>formal</b> mira todo el orden jurídico; la <b>material</b>, la lesión al bien.', 'La «ponderación de bienes» de Liszt se toma <b>con reserva</b>.'],
+  trick: '<b>«Formal: todo el edificio. Material: el daño al bien»</b>.',
+  explain: { q: '¿Qué diferencia hay entre la antijuridicidad formal y la material?', model: 'La antijuridicidad formal significa que la conducta no solo está prohibida por el derecho penal, sino que contradice a todo el orden jurídico en su conjunto, que tiene muchas ramas que deben estar de acuerdo entre sí. La material significa que la conducta lesionó o puso en peligro un bien fundamental y que la sociedad la ve como nociva e injustificada. Liszt dijo que en un conflicto de bienes se justifica sacrificar el menor para salvar el superior, pero el autor lo toma con reserva, porque en México la legítima defensa del hogar puede justificar incluso la muerte del intruso.', keys: ['Formal: todo el orden jurídico', 'Material: lesión o peligro', 'Nociva e injustificada', 'Liszt: bien menor', 'Reserva: legítima defensa del hogar'] }
+});
+
+LESSONS.push({
+  id: 'efectos', icon: '🔨', era: 'I.2 · Efectos', title: 'Qué pasa si está justificada', pages: '128–129', mins: 8,
+  goal: 'Conocer los efectos de una conducta justificada para el agresor y para los partícipes.',
+  steps: [
+    { h: 'Imagina que…', t: 'Arnulfo empieza a golpear a Domiro sin motivo. Domiro se defiende y casi lo somete. Entonces Arnulfo toma un martillo y golpea a Domiro en la cara. ¿Arnulfo puede decir que se defendía? <b>No</b>: <mark>contra una conducta justificada no cabe la legítima defensa</mark>. El agresor fue él.' },
+    { h: 'Tres efectos', t: '',
+      v: () => V.pairs([['Contra el agresor', 'Frente a una conducta justificada, el agresor <b>no</b> puede alegar legítima defensa'], ['Para los partícipes', 'Si la conducta del autor está justificada, la de quien lo ayudó también. Por ejemplo, quien le presta la pistola al dueño de la casa que se defiende de unos ladrones. Es el principio de <b>accesoriedad limitada</b>'], ['Contenido dinámico', 'Las causas de justificación pueden <b>cambiar</b> cuando se reforman otras leyes del orden jurídico']]) },
+    { h: 'Lo que sigue', t: 'En el próximo capítulo verás, una por una, las <mark>causas de justificación</mark>: el consentimiento, la legítima defensa, el estado de necesidad y otras, con los criterios de la jurisprudencia mexicana.' }
+  ],
+  sinop: { root: 'Efectos de la justificación', br: [
+    { t: 'El agresor', kids: ['No puede alegar legítima defensa', 'Arnulfo y el martillo'] },
+    { t: 'Los partícipes', kids: ['También quedan justificados', 'Accesoriedad limitada'] },
+    { t: 'Dinámicas', kids: ['Cambian con las reformas'] },
+    { t: 'Sigue', kids: ['Las causas de justificación'] }] },
+  trap: ['El agresor <b>no</b> puede defenderse legítimamente de quien se defiende de él.', 'Si el autor está justificado, el <b>partícipe</b> también.'],
+  trick: '<b>«Si el autor está justificado, quien le ayudó también»</b>.',
+  explain: { q: '¿Qué efectos tiene que una conducta esté justificada?', model: 'Primero, contra una conducta justificada no cabe la legítima defensa: si Arnulfo agrede a Domiro y Domiro se defiende, Arnulfo no puede justificar el golpe con el martillo, porque el agresor fue él. Segundo, por el principio de accesoriedad limitada, si la conducta del autor está justificada, también la de los partícipes, como quien le presta la pistola al dueño de la casa que se defiende de unos ladrones. Y tercero, las causas de justificación tienen un contenido dinámico que puede cambiar con las reformas a otras leyes.', keys: ['No cabe legítima defensa', 'Arnulfo y Domiro', 'Partícipes justificados', 'Accesoriedad limitada', 'Contenido dinámico'] }
+});
+
+/* ═══════════ LECTURA GUIADA ═══════════ */
+const READING = {
+  puente: [
+    { p: '125', start: 'Solo después de haber confirmado que la conducta es típica', end: 'la conducta típica justificada se debe considerar como un ilícito justificado.', look: '¿Qué pasa si una conducta típica está justificada?', ans: 'Se excluye la antijuridicidad, <b>no hay delito</b> y ya no se pasa a la culpabilidad. Es un <b>ilícito justificado</b>.' }
+  ],
+  injusto: [
+    { p: '125', start: 'En este sentido, la conducta de matar (objeto)', end: 'también se ha dicho que la tipicidad es el indicio de la antijuridicidad.', look: '¿Por qué se dice que la tipicidad es un indicio de la antijuridicidad?', ans: 'Porque la mayoría de las conductas típicas <b>pocas veces</b> están justificadas.', tip: 'Sáltate las notas al pie.' }
+  ],
+  negativos: [
+    { p: '125–126', start: 'La postura aquí adoptada es totalmente distinta', end: 'porque hace equivalente lo que es incomparable.', look: '¿Qué dice la teoría de los elementos negativos del tipo? ¿Por qué el autor la rechaza?', ans: 'Que el hecho justificado es <b>permitido y lícito</b>. El autor la rechaza porque igualaría matar en legítima defensa con <b>matar un mosquito</b>.', tip: 'Empieza abajo de la 125 y sigue en la 126.' },
+    { p: '126–127', start: 'Las causas de justificación cumplen una función político-criminal', end: 'cuenta todos y cada uno de los elementos descritos por el legislador mexicano ¡ni más ni menos!', look: '¿Se admiten causas de justificación supralegales? ¿Qué pasa con el ánimo de venganza?', ans: '<b>No</b> se admiten supralegales. El ánimo de venganza <b>no impide</b> la legítima defensa si se cumplen los requisitos.', tip: 'Sigue en la 127 después de las notas al pie.' }
+  ],
+  aspectos: [
+    { p: '127', start: 'Si la conducta-típica y antijurídica es aquella que no solo está prohibida', end: 'que dan lugar a su justificación frente al orden jurídico en general.', look: '¿Qué es la antijuridicidad formal?', ans: 'Que la conducta contradice a <b>todo el sistema jurídico</b> en su conjunto, no solo al derecho penal.' },
+    { p: '128', start: 'La antijuridicidad material implica que la conducta-típica', end: 'previstas en el párrafo 2o. de la fracción IV del artículo 15 del CPF.', look: '¿Qué es la antijuridicidad material? ¿Por qué el autor toma con reserva la idea de Liszt?', ans: 'La <b>lesión o peligro</b> a un bien, vista como nociva e injustificada. Porque la legítima defensa del hogar puede justificar <b>incluso la muerte</b> del intruso.', tip: 'La cita larga de Liszt se puede leer rápido.' }
+  ],
+  efectos: [
+    { p: '128–129', start: 'Frente a una conducta justificada no procede la legítima defensa del agresor.', end: 'puede variar con las reformas a otras leyes del ordenamiento jurídico.', look: '¿Puede Arnulfo alegar legítima defensa? ¿Qué pasa con quien presta la pistola?', ans: '<b>No</b>, porque él fue el agresor. Quien presta la pistola también queda <b>justificado</b> (accesoriedad limitada).', tip: 'Empieza abajo de la 128 y termina arriba de la 129.' }
+  ]
+};
+
+/* ═══════════ CASOS ═══════════ */
+const CASES = {
+  puente: [
+    { s: 'Un abogado quiere empezar el análisis discutiendo si su cliente era culpable, sin revisar antes si la conducta estaba justificada.', q: '¿Está bien el orden?', a: 'No. Primero la <b>conducta-típica</b>, luego la <b>antijuridicidad</b> y al final la <b>culpabilidad</b>. Si hay justificación, ya no se llega a la culpabilidad.' }
+  ],
+  injusto: [
+    { s: 'Una persona lesiona a otra para repeler un ataque y se cumplen todos los requisitos de la legítima defensa.', q: '¿Es un injusto?', a: 'No. Es un <b>ilícito justificado</b>: la conducta es típica, pero no antijurídica, y no hay delito.' },
+    { s: 'Alguien lesiona a otra persona por un pleito y no hay ninguna causa de justificación.', q: '¿Qué tenemos?', a: 'Un <b>injusto</b>: conducta típica y antijurídica. Falta revisar la culpabilidad.' }
+  ],
+  negativos: [
+    { s: 'Un juez dice: «Se defendió, pero como lo hizo con ganas de vengarse, no aplico la legítima defensa».', q: '¿Tiene razón según el autor?', a: 'No. La fracción IV del artículo 15 <b>no pide ningún ánimo</b>; si se cumplen todos los requisitos, la conducta se justifica. ¡Ni más ni menos!' },
+    { s: 'Una defensa pide aplicar una causa de justificación «que no está en la ley, pero es justa».', q: '¿Se puede?', a: 'No. Para el autor no se admiten causas de justificación <b>supralegales</b>: deben estar en la ley.' }
+  ],
+  aspectos: [
+    { s: 'Una conducta está prohibida por el código penal y ninguna otra ley la permite en esas circunstancias.', q: '¿Qué aspecto de la antijuridicidad se cumple?', a: 'El <b>formal</b>: contradice a todo el orden jurídico.' }
+  ],
+  efectos: [
+    { s: 'Un vecino ayuda a una señora a detener a un ladrón que se metió a su casa, y la señora actúa en legítima defensa.', q: '¿El vecino comete un injusto?', a: 'No. Si la conducta de la señora está justificada, la del vecino también (<b>accesoriedad limitada</b>).' },
+    { s: 'Un asaltante ataca a alguien; la víctima se defiende y el asaltante la golpea más fuerte «para defenderse».', q: '¿El asaltante actúa en legítima defensa?', a: 'No. <b>Contra una conducta justificada no cabe la legítima defensa</b> del agresor.' }
+  ]
+};
+
+/* ═══════════ GUIONES DE VOZ ═══════════ */
+const EXPLAIN = {
+  puente: [
+    'Carmen, el delito es como una escalera de tres escalones. El primero es la conducta típica, con sus tres vasos, que ya estudiaste. Hoy subes el segundo: la antijuridicidad. Y el tercero será la culpabilidad. Si un escalón falta, no se puede pasar al siguiente. Quédate con esto: típica, antijurídica y culpable.',
+    'La pregunta de hoy es: aunque la conducta esté prohibida, ¿hay algo que la justifique? El ejemplo más claro es la legítima defensa. Si hay una causa de justificación, el delito desaparece y ya no se analiza la culpabilidad. Quédate con esto: si está justificada, no hay delito.',
+    'Este es tu cuadro sinóptico. En el centro, el segundo escalón. Primera rama: la conducta típica, que ya viste. Segunda rama: la antijuridicidad, que pregunta si hay justificación. Tercera rama: la culpabilidad, que viene después. Cuarta rama: si falta un escalón, no hay delito. Truco: típica, antijurídica y culpable, tres escalones.'
+  ],
+  injusto: [
+    'Carmen, matar está descrito en el tipo de homicidio. Pero si alguien mata en legítima defensa, su conducta es típica y, aun así, está justificada. Entonces el delito desaparece. Quédate con esto: típica, pero justificada.',
+    'Aprende dos palabras. El injusto es la conducta típica y antijurídica: está prohibida y no hay nada que la justifique. Todavía falta ver la culpabilidad. El ilícito justificado es una conducta típica que sí tiene una causa de justificación: no es antijurídica y no hay delito. Quédate con esto: injusto, sin justificación; ilícito justificado, con justificación.',
+    'El tipo describe la conducta: es el objeto. La antijuridicidad valora esa conducta frente al derecho. Y como casi nunca una conducta típica está justificada, se dice que la tipicidad es un indicio de la antijuridicidad. Indicio quiere decir señal: si es típica, probablemente es antijurídica, pero hay que revisarlo. Quédate con esto: la tipicidad es una señal, no una prueba.',
+    'Este es tu cuadro sinóptico. En el centro, la concepción general. Primera rama, el injusto: típica más antijurídica. Segunda rama, el ilícito justificado: típica, pero justificada, sin delito. Tercera rama: el tipo describe y la antijuridicidad valora. Cuarta rama: la tipicidad es indicio de la antijuridicidad. Truco: típica más sin justificación es igual a injusto.'
+  ],
+  negativos: [
+    'Carmen, ¿es lo mismo matar a una persona en legítima defensa que matar a un mosquito, o que ir al cine con tu pareja? Claro que no. Para el autor, matar sigue estando prohibido; solo excepcionalmente se justifica. Quédate con esto: justificar no es permitir.',
+    'Hay dos posturas. La teoría de los elementos negativos del tipo dice que la justificación quita la prohibición, y que el hecho justificado es permitido y lícito; algunas tesis de jurisprudencia lo dicen así. El autor no está de acuerdo: la justificación no quita la prohibición general, solo la justifica. Si no, igualaríamos cosas que no se pueden comparar, y eso va contra la justicia. Quédate con esto: el autor dice que sigue prohibida, pero se justifica.',
+    'Las causas de justificación sirven para resolver casos en que las circunstancias obligan a justificar una conducta prohibida. Por eso siempre deben estar en la ley; no se aceptan causas inventadas fuera de la ley, que se llaman supralegales. Hay que comprobar todos sus requisitos, sin agregar ni quitar. Y no se pueden exigir ánimos que la ley no pide. Quédate con esto: solo lo que dice la ley.',
+    'Un ejemplo. Alguien defendió sus bienes, pero lo hizo con ganas de vengarse, no de defenderse. Si cumplió todos los requisitos de la legítima defensa, su conducta se justifica igual, porque la fracción cuatro del artículo quince no pide ningún ánimo. Solo el legislador decide cuándo se justifica algo. Hay que aplicar sus requisitos, ni más ni menos. Quédate con esto: ni más ni menos.',
+    'Este es tu cuadro sinóptico. En el centro: justificar no es permitir. Primera rama: la teoría de los elementos negativos dice que lo justificado es permitido, y el autor la rechaza. Segunda rama: para el autor, sigue prohibida pero se justifica; no es igual que matar un mosquito. Tercera rama: deben estar en la ley, sin supralegales, con todos los requisitos. Cuarta rama: no se exigen ánimos que la ley no pide. Truco: ni más ni menos de lo que dice la ley.'
+  ],
+  aspectos: [
+    'Carmen, piensa en el orden jurídico como un edificio con muchos pisos: el civil, el laboral, el fiscal, el penal. Cada piso regula lo suyo, pero todos deben estar de acuerdo. La antijuridicidad mira la conducta desde todo el edificio, no solo desde el piso penal. Quédate con esto: se mira todo el edificio.',
+    'La antijuridicidad tiene dos aspectos. El formal: la conducta no solo está prohibida por el derecho penal, sino que contradice a todo el sistema jurídico. El material: la conducta lesionó o puso en peligro un bien fundamental, y la sociedad la ve como dañina y sin justificación. Quédate con esto: formal, todo el edificio; material, el daño al bien.',
+    'A veces hay un conflicto y uno de dos bienes tiene que perderse. Von Liszt dijo que se debe sacrificar el de menor importancia para salvar el superior. Pero el autor toma esa idea con reserva, porque en México la legítima defensa del hogar puede justificar incluso la muerte del intruso, aunque la vida vale más que las cosas. Basta con que se cumplan los requisitos de la ley. Quédate con esto: la idea de Liszt, con reserva.',
+    'Este es tu cuadro sinóptico. En el centro, los aspectos de la antijuridicidad. Primera rama, el formal: contradice todo el orden jurídico. Segunda rama, el material: lesión o peligro a un bien, dañina y sin justificación. Tercera rama, Liszt: sacrificar el bien menor para salvar el superior. Cuarta rama, la reserva del autor: la legítima defensa del hogar. Truco: formal, todo el edificio; material, el daño al bien.'
+  ],
+  efectos: [
+    'Carmen, imagina que Arnulfo empieza a golpear a Domiro sin motivo. Domiro se defiende y casi lo somete. Entonces Arnulfo toma un martillo y golpea a Domiro en la cara. ¿Arnulfo se estaba defendiendo? No. Contra una conducta justificada no cabe la legítima defensa. El agresor fue él. Quédate con esto: el agresor no se puede defender del que se defiende.',
+    'Hay tres efectos. Primero: contra una conducta justificada, el agresor no puede alegar legítima defensa. Segundo: si la conducta del autor está justificada, también la de quien lo ayudó; por ejemplo, quien le presta la pistola al dueño de la casa que se defiende de unos ladrones. Eso se llama principio de accesoriedad limitada. Tercero: las causas de justificación pueden cambiar cuando se reforman otras leyes. Quédate con esto: agresor, partícipes y cambios.',
+    'En el próximo capítulo vas a ver, una por una, las causas de justificación: el consentimiento, la legítima defensa, el estado de necesidad y otras, con lo que dicen los tribunales mexicanos. Quédate con esto: lo que sigue son las causas de justificación.',
+    'Este es tu cuadro sinóptico. En el centro, los efectos de la justificación. Primera rama, el agresor: no puede alegar legítima defensa, como Arnulfo con el martillo. Segunda rama, los partícipes: también quedan justificados, por la accesoriedad limitada. Tercera rama: las causas cambian con las reformas. Cuarta rama: lo que sigue son las causas de justificación. Truco: si el autor está justificado, quien le ayudó también.'
+  ]
+};
+
+const AUDIO = {
+  puente: 'Resumen corto. El delito tiene tres escalones: conducta típica, antijuridicidad y culpabilidad. La antijuridicidad pregunta si hay una causa que justifique la conducta. Si la hay, no hay delito.',
+  injusto: 'Resumen corto. El injusto es la conducta típica y antijurídica. Si hay una causa de justificación, es un ilícito justificado y no hay delito. La tipicidad es un indicio de la antijuridicidad.',
+  negativos: 'Resumen corto. Para el autor, justificar no es permitir: la conducta sigue prohibida en general. Las causas de justificación deben estar en la ley, sin supralegales, y se aplican con todos sus requisitos, ni más ni menos.',
+  aspectos: 'Resumen corto. La antijuridicidad formal es contradecir a todo el orden jurídico. La material es lesionar o poner en peligro un bien de forma dañina e injustificada. La idea de Liszt de sacrificar el bien menor se toma con reserva.',
+  efectos: 'Resumen corto. Contra una conducta justificada no cabe la legítima defensa del agresor. Si el autor está justificado, los partícipes también. Y las causas de justificación pueden cambiar con las reformas.'
+};
+
+/* ═══════════ BANCO DE PREGUNTAS ═══════════ */
+const BANK = [];
+function Q(t, q, o, a, e, p) { BANK.push({ id: 'q' + (BANK.length + 1), t, q, o, a, e, p }); }
+
+Q('puente', 'Los tres elementos del delito, en orden, son:', ['Conducta-típica, antijuridicidad y culpabilidad', 'Culpabilidad, pena y prisión', 'Dolo, culpa y error', 'Juez, fiscal y defensa'], 0, 'Tres escalones.', '125');
+Q('puente', 'La antijuridicidad se analiza:', ['Antes de la conducta-típica', 'Después de confirmar la conducta-típica', 'Después de la culpabilidad', 'Nunca'], 1, 'Es el segundo escalón.', '125');
+Q('puente', 'Si hay una causa de justificación:', ['Se pasa a la culpabilidad', 'No hay delito y no se analiza la culpabilidad', 'Aumenta la pena', 'Es dolo'], 1, 'Falta el segundo escalón.', '125');
+Q('puente', 'El ejemplo más claro de causa de justificación es:', ['La legítima defensa', 'El error de tipo', 'La vis mayor', 'La hipnosis'], 0, 'Art. 15, fr. IV.', '125');
+Q('puente', 'La antijuridicidad pregunta si la conducta:', ['Contradice a todo el orden jurídico o está justificada', 'Fue voluntaria', 'Se puede reprochar', 'Tuvo testigos'], 0, 'Valora la conducta frente al derecho.', '125');
+
+Q('injusto', 'Una conducta típica y antijurídica es:', ['Un injusto', 'Un ilícito justificado', 'Una conducta atípica', 'Un caso fortuito'], 0, 'Falta ver la culpabilidad.', '125');
+Q('injusto', 'Una conducta típica con una causa de justificación es:', ['Un injusto', 'Un ilícito justificado', 'Un delito doloso', 'Una tentativa'], 1, 'No hay delito.', '125');
+Q('injusto', 'Matar en legítima defensa es:', ['Una conducta atípica', 'Una conducta típica justificada', 'Un injusto', 'Dolo eventual'], 1, 'El tipo de homicidio se cumple, pero se justifica.', '125');
+Q('injusto', 'La legítima defensa está en:', ['Art. 15, fr. IV', 'Art. 15, fr. X', 'Art. 60', 'Art. 302'], 0, 'Del CPF.', '125');
+Q('injusto', 'Se dice que la tipicidad es ______ de la antijuridicidad.', ['La prueba', 'El indicio', 'Lo contrario', 'La pena'], 1, 'Porque pocas veces hay justificación.', '125');
+Q('injusto', 'El tipo describe la conducta (objeto) y la antijuridicidad:', ['La valora frente al derecho', 'La castiga', 'La olvida', 'La confiesa'], 0, 'Valoración del objeto.', '125');
+Q('injusto', 'El homicidio está en el artículo:', ['302 del CPF', '15 del CPF', '60 del CPF', '9 del CPF'], 0, 'La conducta de matar.', '125');
+
+Q('negativos', 'La teoría de los elementos negativos del tipo dice que el hecho justificado es:', ['Prohibido', 'Permitido y lícito', 'Doloso', 'Culpable'], 1, 'El autor no está de acuerdo.', '125–126');
+Q('negativos', 'Para el autor, las causas de justificación:', ['Quitan la prohibición', 'No quitan la prohibición general, solo la justifican', 'Aumentan la pena', 'Son atipicidad'], 1, 'Matar sigue prohibido.', '126');
+Q('negativos', 'El autor dice que no es lo mismo matar en legítima defensa que:', ['Matar un mosquito', 'Robar', 'Mentir', 'Manejar'], 0, 'O ir al cine con la novia.', '126');
+Q('negativos', 'Las causas de justificación «supralegales»:', ['Se admiten siempre', 'No se admiten: deben estar en la ley', 'Son las más importantes', 'Están en el art. 60'], 1, 'Solo el legislador decide.', '126');
+Q('negativos', 'Si alguien se defendió con ánimo de venganza, pero cumplió todos los requisitos de la legítima defensa:', ['No se justifica', 'Sí se justifica', 'Es dolo eventual', 'Es tentativa'], 1, 'La fr. IV no pide ningún ánimo.', '127');
+Q('negativos', 'Para aplicar una causa de justificación hay que tomar en cuenta sus elementos:', ['Ni más ni menos', 'Solo algunos', 'Más los que el juez quiera', 'Ninguno'], 0, 'Lo que dijo el legislador.', '127');
+Q('negativos', 'Las causas de justificación cumplen una función:', ['Político-criminal', 'Religiosa', 'Deportiva', 'Fiscal'], 0, 'Resolver casos en que hay que justificar una conducta prohibida.', '126');
+
+Q('aspectos', 'La antijuridicidad formal significa que la conducta:', ['Contradice a todo el sistema jurídico', 'Solo viola el código penal', 'Es involuntaria', 'Fue culposa'], 0, 'No solo al derecho penal.', '127');
+Q('aspectos', 'La antijuridicidad material implica:', ['Una lesión o puesta en peligro de un bien, vista como nociva e injustificada', 'Un error de tipo', 'Una confesión', 'Una ley nueva'], 0, 'Por eso es injusta.', '128');
+Q('aspectos', 'El orden jurídico se conforma de leyes:', ['Civiles, laborales, fiscales, penales, etcétera', 'Solo penales', 'Solo civiles', 'Solo religiosas'], 0, 'Que deben estar de acuerdo entre sí.', '127');
+Q('aspectos', 'Para Liszt, en un conflicto de bienes se debe sacrificar:', ['El interés de menor importancia', 'El de mayor importancia', 'Los dos', 'Ninguno'], 0, 'Para salvar el superior.', '128');
+Q('aspectos', 'El autor toma la idea de Liszt:', ['Con reserva', 'Sin cambios', 'Como ley', 'Como pena'], 0, 'Por la legítima defensa del hogar.', '128');
+Q('aspectos', 'La legítima defensa del hogar puede llegar a justificar:', ['La privación de la vida del intruso', 'Solo una multa', 'Nada', 'Solo empujarlo'], 0, 'Si se cumplen los requisitos del art. 15, fr. IV, párr. 2.', '128');
+Q('aspectos', 'Una conducta típica y antijurídica, formalmente, es un:', ['Injusto', 'Ilícito justificado', 'Caso fortuito', 'Error'], 0, 'Contradice a todo el sistema.', '127');
+
+Q('efectos', 'Frente a una conducta justificada, el agresor:', ['Puede alegar legítima defensa', 'No puede alegar legítima defensa', 'Queda justificado', 'Es inocente'], 1, 'Arnulfo y el martillo.', '128');
+Q('efectos', 'En el caso de Arnulfo y Domiro, la conducta justificada fue la de:', ['Arnulfo', 'Domiro', 'Los dos', 'Ninguno'], 1, 'Domiro repelía la agresión.', '128');
+Q('efectos', 'Si la conducta del autor está justificada, la de los partícipes:', ['También queda justificada', 'Es un injusto', 'Es dolosa', 'Es más grave'], 0, 'Accesoriedad limitada.', '129');
+Q('efectos', 'El principio que justifica también a los partícipes se llama:', ['Accesoriedad limitada', 'Non bis in idem', 'In dubio pro reo', 'Ultima ratio'], 0, 'En la participación.', '129');
+Q('efectos', 'Quien presta la pistola al dueño de la casa que se defiende de unos ladrones:', ['Comete un injusto', 'No comete ningún injusto', 'Comete robo', 'Comete homicidio'], 1, 'La conducta del autor estaba justificada.', '129');
+Q('efectos', 'Las causas de justificación tienen un contenido:', ['Dinámico, que puede cambiar con reformas', 'Fijo para siempre', 'Religioso', 'Secreto'], 0, 'Dependen de otras leyes.', '129');
+Q('efectos', 'Lo que se estudia después de este capítulo son:', ['Las causas de justificación', 'Los delitos fiscales', 'Las penas', 'El juicio de amparo'], 0, 'Una por una.', '129');
+
+const EXQ = [];
+function E(t, f, q, o, a, e, p) { const it = { id: 'e' + (EXQ.length + 1), t, f, q, o, a, e, p }; EXQ.push(it); BANK.push(it); }
+E('injusto', 'Relación', '¿Qué pareja es correcta?', ['Típica + justificada → injusto', 'Típica + antijurídica → injusto', 'Atípica → ilícito justificado', 'Justificada → delito'], 1, 'Típica y justificada es ilícito justificado.', '125');
+E('negativos', 'Caso', 'Un juez niega la legítima defensa porque el acusado «tenía ganas de vengarse», aunque cumplió todos los requisitos. Según el autor:', ['Hizo bien', 'Se equivocó: la ley no pide ningún ánimo', 'Debió aumentar la pena', 'Es caso fortuito'], 1, '¡Ni más ni menos!', '127');
+E('aspectos', '¿Cuál NO?', '¿Cuál NO es parte de la antijuridicidad material?', ['Lesión o peligro a un bien', 'Que se vea como nociva', 'Que sea injustificada', 'Que la persona sea culpable'], 3, 'La culpabilidad es otro escalón.', '128');
+E('efectos', 'Caso', 'Un asaltante ataca, la víctima se defiende y el asaltante la golpea con un palo. El golpe del asaltante:', ['Está justificado', 'No está justificado: no cabe defensa contra una conducta justificada', 'Es atípico', 'Es caso fortuito'], 1, 'Él fue el agresor.', '128');
+E('negativos', 'Completar', 'No se admiten las causas de justificación ______, que no están en la ley.', ['supralegales', 'legales', 'penales', 'civiles'], 0, 'Deben estar en la ley.', '126');
+
+const TF = [
+  ['La antijuridicidad es el segundo escalón del delito.', true, 'Después de la conducta-típica.', 'puente'],
+  ['Si la conducta está justificada, se pasa a la culpabilidad.', false, 'No hay delito, así que no se analiza la culpabilidad.', 'puente'],
+  ['Un ilícito justificado es un delito.', false, 'Falta la antijuridicidad.', 'injusto'],
+  ['La tipicidad es un indicio de la antijuridicidad.', true, 'Pocas conductas típicas están justificadas.', 'injusto'],
+  ['Para el autor, la conducta justificada es igual a una permitida.', false, 'Sigue prohibida en general, pero se justifica.', 'negativos'],
+  ['Las causas de justificación deben estar en la ley.', true, 'No se admiten supralegales.', 'negativos'],
+  ['El ánimo de venganza impide la legítima defensa.', false, 'La ley no pide ningún ánimo.', 'negativos'],
+  ['La antijuridicidad formal mira todo el orden jurídico.', true, 'No solo el derecho penal.', 'aspectos'],
+  ['El autor acepta sin reservas la ponderación de bienes de Liszt.', false, 'La toma con reserva.', 'aspectos'],
+  ['El agresor puede alegar legítima defensa contra quien se defiende de él.', false, 'Contra una conducta justificada no cabe.', 'efectos'],
+  ['Si el autor está justificado, los partícipes también.', true, 'Accesoriedad limitada.', 'efectos']
+];
+
+const FLASH = [
+  ['puente', 'Tres escalones del delito', 'Conducta-típica, antijuridicidad y culpabilidad.'],
+  ['injusto', 'Injusto', 'Conducta típica y antijurídica, sin causa de justificación.'],
+  ['injusto', 'Ilícito justificado', 'Conducta típica con una causa de justificación: no hay delito.'],
+  ['injusto', 'Indicio', 'La tipicidad es indicio de la antijuridicidad.'],
+  ['negativos', 'Elementos negativos del tipo', 'Teoría según la cual lo justificado es permitido. El autor la rechaza.'],
+  ['negativos', '¡Ni más ni menos!', 'Se aplican todos los requisitos de la ley, sin agregar ánimos ni causas supralegales.'],
+  ['aspectos', 'Antijuridicidad formal', 'Contradice a todo el orden jurídico.'],
+  ['aspectos', 'Antijuridicidad material', 'Lesión o peligro a un bien, nociva e injustificada.'],
+  ['efectos', 'Defensa contra lo justificado', 'No cabe: el agresor no puede alegar legítima defensa.'],
+  ['efectos', 'Accesoriedad limitada', 'Si el autor está justificado, los partícipes también.']
+];
+
+const ORDER_GAMES = [
+  { t: 'Los escalones del delito, en orden', items: ['Conducta-típica', 'Antijuridicidad', 'Culpabilidad'] },
+  { t: 'El mapa del capítulo, en orden', items: ['Injusto e ilícito justificado', 'Justificar no es permitir', 'Antijuridicidad formal', 'Antijuridicidad material', 'Efectos de la justificación'] }
+];
+
+const MATCH_GAMES = [
+  { t: 'Concepto y definición', pairs: [['Injusto', 'Típica y antijurídica'], ['Ilícito justificado', 'Típica, pero justificada'], ['Formal', 'Contradice todo el orden jurídico'], ['Material', 'Lesión o peligro a un bien']] },
+  { t: 'Caso y efecto', pairs: [['Arnulfo y el martillo', 'No cabe defensa del agresor'], ['Prestar la pistola', 'Accesoriedad limitada'], ['Ánimo de venganza', 'Igual se justifica'], ['Legítima defensa del hogar', 'Reserva a Liszt']] }
+];
+
+const RIDDLES = [
+  { a: 'El injusto', c: ['Soy típico.', 'Y también antijurídico.', 'Solo me falta la culpabilidad para ser delito.'], t: 'injusto' },
+  { a: 'La teoría de los elementos negativos del tipo', c: ['Digo que lo justificado es permitido.', 'Algunas tesis me siguen.', 'El autor me rechaza con un mosquito.'], t: 'negativos' },
+  { a: 'La accesoriedad limitada', c: ['Soy un principio.', 'Hablo de los partícipes.', 'Si el autor está justificado, quien le ayudó también.'], t: 'efectos' }
+];
+
+const GLOSSARY = [
+  { k: 'antijuridicidad', t: 'Antijuridicidad', m: ['antijuridicidad', 'antijurídica', 'antijurídico'], d: 'Que una conducta típica contradice a todo el orden jurídico porque no hay nada que la justifique.', ex: 'Segundo escalón del delito.', p: '125' },
+  { k: 'injusto', t: 'Injusto', m: ['injusto'], d: 'Conducta típica y antijurídica.', ex: 'Lesionar en un pleito sin justificación.', p: '125' },
+  { k: 'ilicito', t: 'Ilícito justificado', m: ['ilícito justificado'], d: 'Conducta típica que tiene una causa de justificación. No hay delito.', ex: 'Matar en legítima defensa.', p: '125' },
+  { k: 'justificacion', t: 'Causa de justificación', m: ['causas de justificación', 'causa de justificación'], d: 'Circunstancia que la ley prevé para justificar una conducta prohibida.', ex: 'Legítima defensa, estado de necesidad.', p: '125' },
+  { k: 'legitima', t: 'Legítima defensa', m: ['legítima defensa'], d: 'Repeler una agresión injusta, real y actual, cumpliendo los requisitos de la ley (art. 15, fr. IV).', ex: 'Domiro se defiende de Arnulfo.', p: '125' },
+  { k: 'culpabilidad', t: 'Culpabilidad', m: ['culpabilidad'], d: 'Tercer escalón del delito: si se le puede reprochar la conducta a la persona.', ex: 'Se estudia después.', p: '125' },
+  { k: 'indicio', t: 'Indicio', m: ['indicio'], d: 'Señal que hace pensar que algo es probable, pero no lo prueba.', ex: 'La tipicidad es indicio de la antijuridicidad.', p: '125' },
+  { k: 'valoracion', t: 'Valoración', m: ['valoración'], d: 'Juzgar algo según un criterio, en este caso el derecho.', ex: 'La antijuridicidad valora la conducta.', p: '125' },
+  { k: 'negativos', t: 'Teoría de los elementos negativos del tipo', m: ['elementos negativos del tipo'], d: 'Postura según la cual las causas de justificación quitan la prohibición y el hecho justificado es permitido.', ex: 'El autor la rechaza.', p: '125–126' },
+  { k: 'material', t: 'Justicia material', m: ['justicia material'], d: 'Tratar igual lo igual y distinto lo distinto, según el fondo de las cosas.', ex: 'No igualar legítima defensa y matar un mosquito.', p: '126' },
+  { k: 'supralegal', t: 'Supralegal', m: ['supralegales', 'supralegal'], d: 'Que no está en la ley. No se admiten causas de justificación supralegales.', ex: 'Una justificación inventada.', p: '126' },
+  { k: 'politico', t: 'Política criminal', m: ['político-criminal', 'política criminal'], d: 'Las decisiones del Estado sobre cómo prevenir y castigar los delitos.', ex: 'Función de las causas de justificación.', p: '126' },
+  { k: 'formal', t: 'Antijuridicidad formal', m: ['formal'], d: 'Que la conducta contradice a todo el sistema jurídico, no solo al derecho penal.', ex: 'Es un «injusto».', p: '127' },
+  { k: 'ordenj', t: 'Orden jurídico', m: ['orden jurídico', 'sistema jurídico'], d: 'El conjunto de todas las leyes: civiles, laborales, fiscales, penales, etcétera.', ex: 'Deben estar de acuerdo entre sí.', p: '127' },
+  { k: 'nociva', t: 'Nociva', m: ['nociva'], d: 'Que hace daño.', ex: 'La sociedad ve la conducta como nociva.', p: '128' },
+  { k: 'ponderacion', t: 'Ponderación de bienes', m: ['ponderación de bienes', 'ponderación'], d: 'Comparar qué bien vale más cuando no se pueden salvar los dos.', ex: 'La idea de Liszt.', p: '128' },
+  { k: 'intruso', t: 'Intruso', m: ['intruso'], d: 'Persona que entra sin permiso a un lugar.', ex: 'Legítima defensa del hogar.', p: '128' },
+  { k: 'participe', t: 'Partícipe', m: ['partícipes', 'partícipe'], d: 'Quien ayuda o induce al autor principal, sin ser el autor.', ex: 'Quien presta la pistola.', p: '129' },
+  { k: 'accesoriedad', t: 'Accesoriedad limitada', m: ['accesoriedad limitada'], d: 'Principio según el cual lo que pasa con la conducta del autor alcanza a los partícipes.', ex: 'Si el autor está justificado, el partícipe también.', p: '129' },
+  { k: 'cpf', t: 'CPF (Código Penal Federal)', m: ['Código Penal Federal', 'CPF'], d: 'El código que describe los delitos federales en México.', ex: 'Su artículo 15 regula las excluyentes.', p: '125' }
+];
+
+const VIDEOS = [
+  { t: 'Antijuridicidad (explicación sencilla)', q: 'antijuridicidad derecho penal explicación sencilla', s: 'injusto' },
+  { t: 'Antijuridicidad formal y material', q: 'antijuridicidad formal y material diferencia', s: 'aspectos' },
+  { t: 'Teoría de los elementos negativos del tipo', q: 'teoría de los elementos negativos del tipo explicación', s: 'negativos' }
+];
+const READINGS = [
+  { t: 'El libro completo (gratis, UNAM)', url: 'http://biblio.juridicas.unam.mx/libros/libro.htm?l=3805', s: 'Biblioteca Jurídica Virtual del Instituto de Investigaciones Jurídicas' },
+  { t: 'Código Penal Federal (art. 15)', url: 'https://www.diputados.gob.mx/LeyesBiblio/pdf/CPF.pdf', s: 'Cámara de Diputados · versión vigente' }
+];
+
+const COMPARE = [
+  { t: 'Atipicidad y justificación', head: ['Tema', 'Causa de atipicidad', 'Causa de justificación'], rows: [
+    ['¿Qué falta?', 'Un elemento de la conducta-típica', 'La antijuridicidad'],
+    ['¿Está prohibida?', 'No', 'Sí, en general, pero se justifica'],
+    ['Escalón', 'Primero', 'Segundo'],
+    ['Ejemplo', 'Vis absoluta, error de tipo', 'Legítima defensa']] },
+  { t: 'Injusto e ilícito justificado', head: ['Concepto', 'Típica', 'Antijurídica', '¿Delito?'], rows: [
+    ['Injusto', 'Sí', 'Sí', 'Falta la culpabilidad'],
+    ['Ilícito justificado', 'Sí', 'No', 'No'],
+    ['Conducta atípica', 'No', '—', 'No']] }
+];
+const BIG_SINOP = { root: 'Antijuridicidad', br: [
+  { t: 'Concepto', kids: ['Injusto', 'Ilícito justificado', 'Indicio'] },
+  { t: 'Postura del autor', kids: ['Justificar no es permitir', 'Ni más ni menos'] },
+  { t: 'Aspectos', kids: ['Formal', 'Material'] },
+  { t: 'Efectos', kids: ['Sin defensa del agresor', 'Partícipes justificados'] }] };
+
+const MOTIVATION = [
+  'Diez minutos bien hechos valen más que una hora cansada.',
+  'Este capítulo es corto: cinco estaciones y listo.',
+  'Si una palabra no se entiende, tócala: para eso está.',
+  'Lo que explicas con tus palabras ya es tuyo.',
+  'Equivocarte aquí es practicar. En el examen ya lo sabrás.',
+  'Descansar también es estudiar: tu memoria trabaja mientras descansas.'
+];
+
+const TOUR = [
+  { ic: '👋', t: 'Hola, Carmen', s: 'Esta página te ayuda a estudiar la antijuridicidad paso a paso. Es un capítulo corto, con cinco estaciones. Te enseño a usarla en un minuto.', mock: 'hello' },
+  { ic: '🌸', t: 'Un solo botón', s: 'Al entrar, solo toca el botón rosa grande que dice Continuar. Te lleva justo a donde te quedaste.', mock: 'continue' },
+  { ic: '🪜', t: 'Cinco pasos cortos', s: 'Cada estación dura unos diez minutos y tiene cinco pasos: leer, entender, aplicar, comprobar y explicar.', mock: 'steps' },
+  { ic: '📖', t: 'Leer con el libro', s: 'La página te dice en qué página del libro empezar, dónde terminar y qué buscar. Cuando termines, toca el botón: ya lo leí.', mock: 'read' },
+  { ic: '🔊', t: 'Explícame', s: 'Si algo no se entiende, toca Explícame y te lo explico hablando. En Más opciones puedes cambiar la velocidad de la voz.', mock: 'voice' },
+  { ic: '❓', t: 'Palabras difíciles', s: 'Las palabras difíciles tienen puntitos abajo y un signo de interrogación. Tócalas y verás qué significan.', mock: 'word' },
+  { ic: '☕', t: 'Descansa cuando quieras', s: 'A los diez minutos te aviso para que descanses. Si sales, la página guarda dónde ibas. ¡Tú puedes, Carmen!', mock: 'rest' }
+];
+
+const CW = {"H": 15, "W": 15, "words": [{"w": "ANTIJURIDICIDAD", "c": "Segundo escalón del delito", "r": 1, "col": 0, "d": "A"}, {"w": "INJUSTO", "c": "Conducta típica y antijurídica", "r": 0, "col": 1, "d": "D"}, {"w": "MOSQUITO", "c": "Matarlo no es igual que matar en legítima defensa", "r": 6, "col": 0, "d": "A"}, {"w": "ACCESORIEDAD", "c": "___ limitada: justifica también al partícipe", "r": 0, "col": 10, "d": "D"}, {"w": "FORMAL", "c": "Antijuridicidad que mira todo el orden jurídico", "r": 5, "col": 7, "d": "D"}, {"w": "VENGANZA", "c": "Ánimo que no impide la legítima defensa", "r": 9, "col": 0, "d": "A"}, {"w": "INDICIO", "c": "La tipicidad lo es de la antijuridicidad", "r": 11, "col": 8, "d": "A"}, {"w": "PISTOLA", "c": "La prestó un partícipe al dueño de la casa", "r": 4, "col": 8, "d": "A"}, {"w": "MATERIAL", "c": "Antijuridicidad de la lesión o peligro al bien", "r": 8, "col": 7, "d": "A"}, {"w": "LISZT", "c": "Propuso sacrificar el bien de menor valor", "r": 0, "col": 3, "d": "D"}, {"w": "SUPRALEGAL", "c": "Causa de justificación que no está en la ley", "r": 5, "col": 4, "d": "D"}, {"w": "MARTILLO", "c": "Con él golpeó Arnulfo a Domiro", "r": 7, "col": 13, "d": "D"}, {"w": "CULPABILIDAD", "c": "Tercer escalón del delito", "r": 13, "col": 0, "d": "A"}]};
+
+/* ═══════════ EXÁMENES (armados con el banco) ═══════════ */
+const QB = {}; BANK.forEach(q => { QB[q.id] = q; });
+const byT = t => BANK.filter(q => q.t === t && q.id[0] === 'q');
+const EXAMS = (() => {
+  const st = LESSONS.filter(l => !l.bridge).map(l => l.id);
+  const pick = idxs => st.flatMap(t => idxs.map(i => byT(t)[i])).filter(Boolean).map(q => q.id);
+  const a = pick(CHAP.exA), b = pick(CHAP.exB);
+  const c = EXQ.map(q => q.id).concat(st.map(t => (byT(t)[6] || byT(t)[5] || byT(t)[0]).id)).slice(0, 18);
+  return [
+    { id: 'ex1', t: 'Examen 1', s: `Todo el capítulo · ${a.length} preguntas`, qs: a },
+    { id: 'ex2', t: 'Examen 2', s: `Todo el capítulo · ${b.length} preguntas`, qs: b },
+    { id: 'ex3', t: 'Examen 3 · Estilo examen', s: `Casos, completar y «¿cuál NO?» · ${c.length} preguntas`, qs: c }
+  ];
+})();
+
+/* ═══════════ PLATAFORMA · LÓGICA (modo enfocado, ajustada a Carmen) ═══════════ */
+(function () {
+  'use strict';
+  const KEY = CHAP.key;
+  const STEP_NAMES = ['Leer', 'Entender', 'Aplicar', 'Comprobar', 'Explicar'];
+  const STEP_IC = ['📖', '💡', '🧩', '✅', '🗣️'];
+  const PAUSE_MS = 10 * 60 * 1000;
+  const MAXHOT = 4;
+  const LET = 'ABCD';
+  const NAME = STUDENT.name;
+  const L = id => LESSONS.find(l => l.id === id);
+  const idx = id => LESSONS.findIndex(l => l.id === id);
+  const coreQs = id => byT(id).slice(0, 3);
+  const app = document.getElementById('app');
+
+  /* ── Estado guardado ── */
+  function defaults() { return { v: 1, at: LESSONS[0].id, pos: {}, done: {}, sp: {}, reveal: {}, lq: {}, ans: {}, wrong: [], rate: 0.95, auto: false, tour: false, days: [], notes: {}, keys: {}, exams: {}, cw: {} }; }
+  function load() {
+    try { const raw = localStorage.getItem(KEY); if (raw) { const d = JSON.parse(raw); const b = defaults(); Object.keys(b).forEach(k => { if (d[k] === undefined) d[k] = b[k]; }); return d; } } catch (e) { /* sin almacenamiento */ }
+    return defaults();
+  }
+  let S = load();
+  function save() { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) { /* ignorar */ } }
+  const dkey = d => d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+  const today = () => dkey(new Date());
+  const daysBetween = (a, b) => Math.round((new Date(b + 'T12:00:00') - new Date(a + 'T12:00:00')) / 864e5);
+  function markDay() { const t = today(); if (!S.days.includes(t)) { S.days.push(t); S.days = S.days.slice(-90); save(); } }
+  function streak() { let n = 0; const d = new Date(); while (S.days.includes(dkey(d))) { n++; d.setDate(d.getDate() - 1); } return n; }
+  const pos = id => S.pos[id] || { step: 0, sub: 0 };
+
+  /* ── Pantallas de una estación ── */
+  function count(id, step) { const l = L(id); return [READING[id].length, l.steps.length + 1, CASES[id].length, coreQs(id).length, 1][step]; }
+  function totalScreens(id) { let n = 0; for (let s = 0; s < 5; s++) n += count(id, s); return n; }
+  function screenIndex(id, step, sub) { let n = 0; for (let s = 0; s < step; s++) n += count(id, s); return n + sub; }
+
+  /* ── Estado de pantalla ── */
+  const UI = { view: 'home', st: null, sheet: null, modal: null, game: null, ex: null, tour: null, fin: null, t0: 0, autoKey: '', q: '', rv: {}, cwWord: null, cwCheck: false };
+
+  /* ── Voz que explica ── */
+  function n2w(n) {
+    n = +n;
+    const u = ['cero', 'uno', 'dos', 'tres', 'cuatro', 'cinco', 'seis', 'siete', 'ocho', 'nueve', 'diez', 'once', 'doce', 'trece', 'catorce', 'quince', 'dieciséis', 'diecisiete', 'dieciocho', 'diecinueve', 'veinte', 'veintiuno', 'veintidós', 'veintitrés', 'veinticuatro', 'veinticinco', 'veintiséis', 'veintisiete', 'veintiocho', 'veintinueve'];
+    const t = ['', '', '', 'treinta', 'cuarenta', 'cincuenta', 'sesenta', 'setenta', 'ochenta', 'noventa'];
+    const h = ['', 'ciento', 'doscientos', 'trescientos', 'cuatrocientos', 'quinientos', 'seiscientos', 'setecientos', 'ochocientos', 'novecientos'];
+    if (n < 30) return u[n];
+    if (n < 100) return t[Math.floor(n / 10)] + (n % 10 ? ' y ' + u[n % 10] : '');
+    if (n === 100) return 'cien';
+    if (n < 1000) return h[Math.floor(n / 100)] + (n % 100 ? ' ' + n2w(n % 100) : '');
+    if (n < 1e6) { const k = Math.floor(n / 1000), r = n % 1000; return (k === 1 ? 'mil' : n2w(k) + ' mil') + (r ? ' ' + n2w(r) : ''); }
+    return String(n);
+  }
+  function say(html) {
+    let s = String(html).replace(/<[^>]+>/g, ' ').replace(/&nbsp;/g, ' ');
+    s = s.replace(/\bCPF\b/g, 'Código Penal Federal').replace(/\bDOF\b/g, 'Diario Oficial de la Federación').replace(/\bCNPP\b/g, 'Código Nacional de Procedimientos Penales')
+      .replace(/\bart\.\s*/gi, 'artículo ').replace(/\bpágs\.\s*/gi, 'páginas ').replace(/\bpág\.\s*/gi, 'página ');
+    s = s.replace(/[«»"“”]/g, '').replace(/≠/g, ' no es lo mismo que ').replace(/→/g, ', luego, ').replace(/\s=\s/g, ' es ').replace(/·/g, ', ').replace(/…/g, '. ');
+    s = s.replace(/(\d)\s*[–-]\s*(\d)/g, '$1 a $2').replace(/(\d{1,3}),(\d{3})/g, '$1$2').replace(/\d+/g, m => n2w(m));
+    return s.replace(/\s+/g, ' ').trim();
+  }
+  const synth = ('speechSynthesis' in window) ? window.speechSynthesis : null;
+  let voice = null, speakingId = null, tok = 0;
+  function pickVoice() { if (!synth) return; const vs = synth.getVoices(); voice = vs.find(v => /es[-_]MX/i.test(v.lang)) || vs.find(v => /es[-_](US|419)/i.test(v.lang)) || vs.find(v => /^es/i.test(v.lang)) || null; }
+  if (synth) { pickVoice(); try { synth.addEventListener('voiceschanged', pickVoice); } catch (e) { synth.onvoiceschanged = pickVoice; } }
+  function speak(text, id, onend) {
+    if (!synth) { toast('Tu navegador no tiene voz. Prueba abrir la página en Chrome.'); if (onend) setTimeout(onend, 5000); return; }
+    const my = ++tok; synth.cancel();
+    const parts = say(text).split(/([.!?])\s+/).reduce((acc, p, i, arr) => { if (i % 2 === 0) acc.push(p + (arr[i + 1] || '')); return acc; }, []).filter(x => x.trim());
+    speakingId = id || 'x'; syncVoice();
+    parts.forEach((p, i) => {
+      const u = new SpeechSynthesisUtterance(p); u.lang = 'es-MX'; if (voice) u.voice = voice; u.rate = S.rate;
+      if (i === parts.length - 1) u.onend = () => { if (my !== tok) return; speakingId = null; syncVoice(); if (onend) onend(); };
+      u.onerror = () => { if (my !== tok) return; speakingId = null; syncVoice(); };
+      synth.speak(u);
+    });
+  }
+  function stop() { tok++; if (synth) synth.cancel(); speakingId = null; syncVoice(); }
+  let SAY = {};
+  function sayBtn(id, text, label, cls) {
+    label = label || 'Explícame'; SAY[id] = text; const on = speakingId === id;
+    return `<button class="say ${cls || ''} ${on ? 'on' : ''}" data-a="say" data-id="${id}" data-l="${label}"><span class="ic" aria-hidden="true">${on ? '⏹' : '🔊'}</span><span class="lbl">${on ? 'Detener' : label}</span></button>`;
+  }
+  function syncVoice() {
+    document.querySelectorAll('[data-a="say"]').forEach(b => {
+      const on = speakingId === b.dataset.id; b.classList.toggle('on', on);
+      b.querySelector('.lbl').textContent = on ? 'Detener' : b.dataset.l; b.querySelector('.ic').textContent = on ? '⏹' : '🔊';
+    });
+  }
+
+  /* ── Palabras difíciles subrayadas ── */
+  const GL = {}; const ALTS = [];
+  GLOSSARY.forEach(g => { GL[g.k] = g; g.m.forEach(m => ALTS.push([m, g.k])); });
+  ALTS.sort((a, b) => b[0].length - a[0].length);
+  const altKey = {}; ALTS.forEach(([m, k]) => { altKey[m.toLowerCase()] = k; });
+  const esc = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  let GL_RE = null;
+  try { GL_RE = new RegExp('(^|[^\\p{L}])(' + ALTS.map(a => esc(a[0])).join('|') + ')(?![\\p{L}])', 'giu'); } catch (e) { GL_RE = null; }
+  function hot(html, used) {
+    if (!html) return '';
+    if (!GL_RE) return html;
+    let skip = 0;
+    return String(html).split(/(<[^>]+>)/).map(p => {
+      if (p.charAt(0) === '<') { if (/^<(button|a)\b/i.test(p)) skip++; else if (/^<\/(button|a)>/i.test(p)) skip = Math.max(0, skip - 1); return p; }
+      if (skip || used.size >= MAXHOT) return p;
+      return p.replace(GL_RE, (all, pre, w) => {
+        const k = altKey[w.toLowerCase()];
+        if (!k || used.has(k) || used.size >= MAXHOT) return all;
+        used.add(k);
+        return pre + `<button class="hw" data-a="gl" data-k="${k}">${w}<span class="hw-q" aria-hidden="true">?</span></button>`;
+      });
+    }).join('');
+  }
+
+  /* ── Utilidades ── */
+  function shuffle(a) { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
+  function toast(msg) { const t = document.createElement('div'); t.className = 'toast'; t.setAttribute('role', 'status'); t.textContent = msg; document.body.appendChild(t); setTimeout(() => t.remove(), 2800); }
+  const top = () => window.scrollTo(0, 0);
+  let askKey = null, askT = 0;
+  function ask(key, msg) { if (askKey === key && Date.now() - askT < 5000) { askKey = null; return true; } askKey = key; askT = Date.now(); toast(msg); return false; }
+  function rec(q, ok, fromErrors) {
+    S.ans[q.id] = ok;
+    if (!ok && !S.wrong.includes(q.id)) S.wrong.push(q.id);
+    if (ok && fromErrors) S.wrong = S.wrong.filter(x => x !== q.id);
+    save();
+  }
+  function dueReview() {
+    const lv = [1, 3, 7];
+    for (const l of LESSONS) {
+      const d = S.done[l.id]; if (!d) continue;
+      const done = (S.sp[l.id] || []).length; if (done >= lv.length) continue;
+      if (daysBetween(d, today()) >= lv[done]) return l.id;
+    }
+    return null;
+  }
+  function nextStation() { if (S.at && !S.done[S.at]) return S.at; const n = LESSONS.find(l => !S.done[l.id]); return n ? n.id : null; }
+
+  /* ── Preguntas ── */
+  const qScript = (q, n) => `${n ? 'Pregunta ' + n + '. ' : ''}${q.q.replace(/_{3,}/g, ' espacio en blanco ')} ${q.o.map((o, i) => 'Opción ' + LET[i] + ': ' + o + '.').join(' ')}`;
+  const fbScript = (q, ch) => (ch === q.a ? `¡Muy bien, ${NAME}! ` : `Casi, ${NAME}. No pasa nada, así se aprende. La respuesta correcta es la ${LET[q.a]}: ${q.o[q.a]}. `) + q.e + ` Lo encuentras en la página ${q.p} del libro.`;
+  function vOpts(q, ch, act) {
+    return `<div class="opts">${q.o.map((o, i) => { let c = ''; if (ch != null) { if (i === q.a) c = 'ok'; else if (i === ch) c = 'no'; }
+      return `<button class="opt ${c}" data-a="${act}" data-i="${i}" ${ch != null ? 'disabled' : ''}><span class="ov">${LET[i]}</span><span>${o}</span></button>`; }).join('')}</div>`;
+  }
+  function vFb(q, ch, id) {
+    const ok = ch === q.a;
+    return `<div class="fb ${ok ? 'ok' : 'no'}" role="status"><b class="h">${ok ? '¡Muy bien!' : 'Casi. Vamos a verlo.'}</b><p>${ok ? '' : `La correcta es la <b>${LET[q.a]}</b>: ${q.o[q.a]}. `}${q.e}</p><span class="pg">Libro, pág. ${q.p}</span>${sayBtn(id, fbScript(q, ch), 'Explícame por qué')}</div>`;
+  }
+
+  /* ═════════ VISTAS ═════════ */
+  const ICONS = {
+    home: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg>',
+    study: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 012-2h13v16H6a2 2 0 00-2 2z"/><path d="M4 19V5"/></svg>',
+    review: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 109-9"/><path d="M3 4v5h5"/></svg>',
+    words: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>'
+  };
+  function vTabs() {
+    const g = { home: 'home', more: 'home', exams: 'home', exam: 'home', hoja: 'home', videos: 'home', avance: 'home', study: 'study', next: 'study', review: 'review', game: 'review', words: 'words' }[UI.view] || 'home';
+    const tab = (v, t) => `<button class="tab ${g === v ? 'on' : ''}" data-a="go" data-v="${v}" ${g === v ? 'aria-current="page"' : ''}>${ICONS[v]}<span>${t}</span></button>`;
+    return `<nav class="tabbar" aria-label="Secciones"><div class="tabbar-in">${tab('home', 'Inicio')}${tab('study', 'Estudiar')}${tab('review', 'Repasar')}${tab('words', 'Palabras')}</div></nav>`;
+  }
+  const backTo = (v, t) => `<button class="back" data-a="go" data-v="${v}">← ${t}</button>`;
+
+  /* Inicio */
+  function vHome() {
+    const h = new Date().getHours();
+    const g = h < 12 ? 'Buenos días' : h < 19 ? 'Buenas tardes' : 'Buenas noches';
+    const nDone = LESSONS.filter(l => S.done[l.id]).length;
+    const nx = nextStation(); let cont;
+    if (nx) {
+      const l = L(nx), p = pos(nx), started = p.step > 0 || p.sub > 0;
+      cont = `<button class="btn big wide" data-a="cont"><span class="big-t">${started ? 'Continuar' : (nDone ? 'Continuar' : 'Empezar')} →</span><span class="big-s">${l.icon} ${l.title}<br>Paso ${p.step + 1} de 5: ${STEP_NAMES[p.step]}</span></button>`;
+    } else cont = `<button class="btn big wide" data-a="go" data-v="exams"><span class="big-t">Hacer el examen →</span><span class="big-s">Terminaste las ${LESSONS.length} estaciones 🎉</span></button>`;
+    const due = dueReview();
+    const m = MOTIVATION[(new Date().getDate()) % MOTIVATION.length];
+    return `<main class="app home">
+      <section class="hero"><div class="eyebrow on-acc">Expediente · Capítulo ${CHAP.n} · ${CHAP.short}</div><h1>${g}, ${NAME}</h1>
+        <div class="hero-meter"><span>${nDone} de ${LESSONS.length} estaciones</span><div class="bar"><i style="width:${Math.round(nDone / LESSONS.length * 100)}%"></i></div></div></section>
+      ${cont}
+      ${due ? `<button class="btn ghost wide tall" data-a="spaced" data-id="${due}">🔁 Repaso de hoy · 5 preguntas<br><small>${L(due).title}</small></button>` : ''}
+      <button class="btn line wide" data-a="tour">▶ Ver cómo se usa la página (1 minuto)</button>
+      <details class="more"><summary>Más opciones</summary><div class="stack tight-6">
+        <button class="mission-l" data-a="go" data-v="exams"><span>📝</span><span class="t">Exámenes de práctica</span><span>›</span></button>
+        <button class="mission-l" data-a="go" data-v="hoja"><span>🗂️</span><span class="t">Hoja de repaso (tapa y destapa)</span><span>›</span></button>
+        <button class="mission-l" data-a="go" data-v="videos"><span>🎬</span><span class="t">Videos y lecturas</span><span>›</span></button>
+        <button class="mission-l" data-a="go" data-v="avance"><span>📈</span><span class="t">Mi avance y la voz</span><span>›</span></button>
+      </div></details>
+      <p class="motiv-s center">${m}</p>
+    </main>`;
+  }
+
+  /* Estudiar */
+  function vStudy() {
+    return `<main class="app"><h1>Estudiar</h1><p class="muted">Capítulo ${CHAP.n} · ${CHAP.short} · págs. ${CHAP.pages}. Ve en orden, una estación a la vez.</p>
+    <div class="route">${LESSONS.map((l, i) => {
+      const p = pos(l.id), d = S.done[l.id];
+      const stt = d ? 'Terminada ✓' : (p.step || p.sub) ? `Vas en el paso ${p.step + 1}: ${STEP_NAMES[p.step]}` : 'Sin empezar';
+      return `<button class="lrow ${d ? 'done' : ''}" data-a="open" data-id="${l.id}"><span class="n">${d ? '✓' : i + 1}</span><span><span class="tt">${l.icon} ${l.title}</span><span class="meta">págs. ${l.pages} · unos ${l.mins} min · ${stt}</span></span><span class="ic">›</span></button>`;
+    }).join('')}</div></main>`;
+  }
+
+  /* Estación en modo enfocado */
+  function vLesson() {
+    const id = UI.st, l = L(id), p = pos(id), st = p.step, sub = p.sub;
+    const tot = totalScreens(id), si = screenIndex(id, st, sub), n = count(id, st);
+    const used = new Set(); const rk = `${id}:${st}:${sub}`; const rev = !!S.reveal[rk];
+    const last = sub === n - 1;
+    const nextLbl = last && st < 4 ? `Siguiente: ${STEP_NAMES[st + 1]} →` : 'Siguiente →';
+    const nextB = `<button class="btn big-n" data-a="next">${nextLbl}</button>`;
+    let body = '', primary = nextB, main = '';
+    if (st === 0) {
+      const f = READING[id][sub];
+      main = `Abre tu libro en la página ${f.p}. Empieza donde dice: ${f.start}. Lee hasta donde dice: ${f.end}. Mientras lees, busca esto: ${f.look} ${f.tip ? f.tip + ' ' : ''}Sáltate las notas al pie, que son los textos chiquitos con numeritos abajo de la página. Cuando termines, toca el botón: ya lo leí.`;
+      body = `<section class="sheet frag ${rev ? 'fdone' : ''}"><div class="eyebrow">Pedacito ${sub + 1} de ${n} · Libro, pág. ${f.p}</div><h2>Lee en tu libro</h2>${sayBtn('m-' + rk, main, 'Explícame', 'wide')}
+        <div class="fr-where"><div><span class="lab">Empieza en</span>«${f.start}…»</div><div><span class="lab">Termina en</span>«…${f.end}»</div></div>
+        <p class="fr-look"><b>Busca:</b> ${hot(f.look, used)}</p>${f.tip ? `<p class="ojo small">💡 ${f.tip}</p>` : ''}
+        ${rev ? `<div class="model"><b>Lo que tenías que encontrar</b><p>${hot(f.ans, used)}</p>${sayBtn('a-' + rk, 'Lo que tenías que encontrar es: ' + f.ans, 'Escuchar la respuesta')}</div>` : ''}</section>`;
+      if (!rev) primary = `<button class="btn big-n" data-a="reveal">Ya lo leí ✓</button>`;
+    } else if (st === 1) {
+      if (sub < l.steps.length) {
+        const s = l.steps[sub]; main = EXPLAIN[id][sub];
+        body = `<section class="sheet"><div class="eyebrow">Explicación ${sub + 1} de ${n}</div><h2>${s.h}</h2>${sayBtn('m-' + rk, main, 'Explícame', 'wide')}${s.t ? `<p class="body">${hot(s.t, used)}</p>` : ''}${s.v ? s.v() : ''}</section>`;
+      } else {
+        main = EXPLAIN[id][l.steps.length];
+        body = `<section class="sheet"><div class="eyebrow">Resumen · ${n} de ${n}</div><h2>Tu cuadro sinóptico</h2>${sayBtn('m-' + rk, main, 'Explícame el cuadro', 'wide')}
+          ${V.sinop(l.sinop.root, l.sinop.br)}
+          <details class="callout trap"><summary>⚠️ Cuidado en el examen y truco</summary><ul>${l.trap.map(x => `<li>${x}</li>`).join('')}</ul><p class="trick">🧠 <b>Truco:</b> ${l.trick}</p></details></section>`;
+      }
+    } else if (st === 2) {
+      const c = CASES[id][sub];
+      main = `Caso de la vida real. ${c.s} La pregunta es: ${c.q} Piénsalo un momento y después toca: ver respuesta.`;
+      body = `<section class="sheet"><div class="eyebrow">Caso ${sub + 1} de ${n}</div><h2>¿Qué harías?</h2>${sayBtn('m-' + rk, main, 'Explícame', 'wide')}<p class="case-s">${hot(c.s, used)}</p><p class="q-text">${hot(c.q, used)}</p>
+        ${rev ? `<div class="model"><b>Respuesta</b><p>${hot(c.a, used)}</p>${sayBtn('a-' + rk, 'La respuesta es: ' + c.a, 'Escuchar la respuesta')}</div>` : ''}</section>`;
+      if (!rev) primary = `<button class="btn big-n" data-a="reveal">Ver respuesta</button>`;
+    } else if (st === 3) {
+      const q = coreQs(id)[sub]; const ch = S.lq[id + ':' + sub];
+      main = qScript(q, sub + 1);
+      body = `<section class="sheet q"><div class="eyebrow">Pregunta ${sub + 1} de ${n}</div>${sayBtn('m-' + rk, main, 'Léemela', 'wide')}<p class="q-text">${q.q}</p>${vOpts(q, ch, 'lopt')}${ch != null ? vFb(q, ch, 'f-' + rk) : ''}</section>`;
+      if (ch == null) primary = `<button class="btn big-n" disabled>Elige una respuesta</button>`;
+    } else {
+      const ex = l.explain; const keys = S.keys[id] || [];
+      main = `Ahora te toca a ti, ${NAME}. ${ex.q} Escríbelo con tus palabras, aunque sea poquito. No tiene que quedar perfecto. Cuando termines, toca: ver respuesta modelo.`;
+      body = `<section class="sheet"><div class="eyebrow">Último paso</div><h2>Dilo con tus palabras</h2>${sayBtn('m-' + rk, main, 'Explícame', 'wide')}<p class="q-text">${ex.q}</p>
+        <label class="sr" for="note">Tu respuesta</label><textarea id="note" class="ta" data-in="note" placeholder="Escribe aquí, aunque sea poquito…">${(S.notes[id] || '').replace(/</g, '&lt;')}</textarea>
+        ${rev ? `<div class="model"><b>Respuesta modelo</b><p>${ex.model}</p>${sayBtn('a-' + rk, 'Una respuesta modelo sería: ' + ex.model + ' Ahora marca las ideas que sí pusiste.', 'Escuchar')}</div>
+        <div class="stack tight"><b>Marca las ideas que sí pusiste:</b>${ex.keys.map((k, i) => `<label class="check"><input type="checkbox" data-a="key" data-i="${i}" ${keys.includes(i) ? 'checked' : ''}><span>${k}</span></label>`).join('')}</div>` : ''}</section>`;
+      primary = rev ? `<button class="btn big-n" data-a="finish">Terminar estación ✓</button>` : `<button class="btn big-n" data-a="reveal">Ver respuesta modelo</button>`;
+    }
+    UI.mainSay = 'm-' + rk; UI.mainKey = rk;
+    return `<div class="focus">
+      <header class="ftop"><button class="xbtn" data-a="exit">✕ Salir</button><div class="fstep"><b>Paso ${st + 1} de 5 · ${STEP_IC[st]} ${STEP_NAMES[st]}</b><span>${l.icon} ${l.title}</span></div></header>
+      <div class="bar thin" role="progressbar" aria-valuemin="0" aria-valuemax="${tot}" aria-valuenow="${si + 1}" aria-label="Avance de la estación"><i style="width:${Math.round((si + 1) / tot * 100)}%"></i></div>
+      <main class="app focus-main">${body}</main>
+      <footer class="fbot"><button class="back-l" data-a="prev" ${si === 0 ? 'disabled' : ''}>← Atrás</button>${primary}</footer></div>`;
+  }
+
+  /* ¿Qué sigue? */
+  function vNext() {
+    const l = L(UI.fin); const i = idx(UI.fin);
+    const nx = LESSONS.slice(i + 1).find(x => !S.done[x.id]) || LESSONS.find(x => !S.done[x.id]);
+    const nl = nx || null;
+    const text = `¡Terminaste la estación ${l.title}, ${NAME}! Mañana te toca un repaso de cinco preguntas de esta estación; te va a aparecer en Inicio. ${nl ? 'Lo que sigue es: ' + nl.title + '. Si ya estás cansada, descansa: la página guarda tu avance.' : 'Ya terminaste todas las estaciones del capítulo ${CHAP.word}. Ahora puedes hacer un examen de práctica.'}`;
+    return `<main class="app">
+      <section class="card center done-card"><div class="big-emoji" aria-hidden="true">🎉</div><h1>¡Terminaste!</h1><p>${l.icon} <b>${l.title}</b></p></section>
+      <section class="card"><h2>¿Qué sigue?</h2>${sayBtn('next-say', text, 'Escuchar', 'wide')}<div class="plan">
+        <div class="plan-r"><span aria-hidden="true">🔁</span><div><b>Mañana</b><small>Un repaso de 5 preguntas de esta estación. Te aparecerá en Inicio.</small></div></div>
+        ${nl ? `<div class="plan-r"><span aria-hidden="true">${nl.icon}</span><div><b>La siguiente parte</b><small>${nl.title} · págs. ${nl.pages} · unos ${nl.mins} min</small></div></div>` : `<div class="plan-r"><span aria-hidden="true">📝</span><div><b>Ya puedes hacer el examen</b><small>Terminaste todas las estaciones del capítulo ${CHAP.n}.</small></div></div>`}
+      </div></section>
+      ${nl ? `<button class="btn big wide" data-a="open" data-id="${nl.id}"><span class="big-t">Seguir con la siguiente →</span><span class="big-s">${nl.icon} ${nl.title}</span></button>` : `<button class="btn big wide" data-a="go" data-v="exams"><span class="big-t">Hacer el examen →</span></button>`}
+      <button class="btn line wide" data-a="go" data-v="home">☕ Descansar por hoy</button>
+    </main>`;
+  }
+
+  /* Repasar */
+  const GAMES = [
+    { g: 'sinops', ic: '🗂️', t: 'Ver esquemas', s: 'Tus cuadros sinópticos, con voz' },
+    { g: 'audio', ic: '🎧', t: 'Escuchar resúmenes', s: 'Audios cortos de medio minuto' },
+    { g: 'quiz', ic: '✅', t: 'Preguntas', s: 'Por estación o mezcladas' },
+    { g: 'errors', ic: '🩹', t: 'Mis errores', s: '' },
+    { g: 'flash', ic: '🃏', t: 'Tarjetas', s: 'Voltea y recuerda' },
+    { g: 'tf', ic: '⚖️', t: '¿Verdadero o falso?', s: 'Rápido y fácil' },
+    { g: 'order', ic: '🔢', t: 'Ordenar', s: 'Pon las cosas en orden' },
+    { g: 'match', ic: '🔗', t: 'Relacionar', s: 'Une cada pareja' },
+    { g: 'riddle', ic: '🕵️', t: 'Adivina quién soy', s: 'Con pistas' },
+    { g: 'cw', ic: '✏️', t: 'Crucigrama', s: '15 palabras del capítulo' }
+  ];
+  function vReview() {
+    return `<main class="app"><h1>Repasar</h1><p class="muted">Elige una forma de repasar. Las dos primeras son con esquemas y audio, como te gusta.</p>
+    <div class="tiles">${GAMES.map(x => `<button class="tile ${x.g === 'sinops' || x.g === 'audio' ? 'fav' : ''}" data-a="game" data-g="${x.g}"><span class="ti" aria-hidden="true">${x.ic}</span><b>${x.t}</b><span>${x.g === 'errors' ? (S.wrong.length ? S.wrong.length + ' por repasar' : 'Aún no tienes') : x.s}</span></button>`).join('')}</div></main>`;
+  }
+  function startGame(g, extra) {
+    stop();
+    const G = { g };
+    if (g === 'quiz') G.pick = true;
+    if (g === 'errors') { if (!S.wrong.length) { toast('¡No tienes errores guardados!'); return; } Object.assign(G, { g: 'quiz', list: shuffle(S.wrong).slice(0, 10), i: 0, ch: null, ok: 0, errors: true, title: 'Mis errores' }); }
+    if (g === 'flash') Object.assign(G, { list: FLASH.map((_, i) => i), i: 0, flip: false });
+    if (g === 'tf') Object.assign(G, { list: shuffle(TF.map((_, i) => i)), i: 0, pick: null, ok: 0 });
+    if (g === 'order') G.gi = null;
+    if (g === 'match') G.gi = null;
+    if (g === 'riddle') Object.assign(G, { i: 0, n: 1, show: false });
+    if (g === 'vocab') { const list = shuffle(GLOSSARY.map(x => x.k)).slice(0, 8); Object.assign(G, { list, i: 0, ch: null, ok: 0, opts: list.map(k => shuffle([k].concat(shuffle(GLOSSARY.map(x => x.k).filter(x => x !== k)).slice(0, 3)))) }); }
+    if (extra) Object.assign(G, extra);
+    UI.game = G; UI.view = 'game'; render(); top();
+  }
+  function startQuiz(list, title, extra) { UI.game = Object.assign({ g: 'quiz', list, i: 0, ch: null, ok: 0, title }, extra || {}); UI.view = 'game'; render(); top(); }
+
+  function vGame() {
+    const G = UI.game; const back = backTo('review', 'Repasar');
+    if (G.g === 'sinops') {
+      return `<main class="app">${back}<h1>Esquemas</h1><p class="muted">Toca «Explícame el cuadro» y escucha rama por rama.</p>
+        <section class="card"><h2>Todo el capítulo</h2>${V.sinop(BIG_SINOP.root, BIG_SINOP.br)}</section>
+        ${LESSONS.map(l => `<section class="card"><div class="eyebrow">${l.icon} págs. ${l.pages}</div><h2>${l.title}</h2>${sayBtn('sn-' + l.id, EXPLAIN[l.id][l.steps.length], 'Explícame el cuadro', 'wide')}${V.sinop(l.sinop.root, l.sinop.br)}</section>`).join('')}</main>`;
+    }
+    if (G.g === 'audio') {
+      return `<main class="app">${back}<h1>Escuchar resúmenes</h1><p class="muted">Cada audio dura más o menos medio minuto. Puedes escucharlos mientras haces otra cosa.</p>
+        ${LESSONS.map(l => `<section class="card audio-row"><div><b>${l.icon} ${l.title}</b><div class="small muted">págs. ${l.pages}</div></div>${sayBtn('au-' + l.id, AUDIO[l.id], 'Escuchar')}</section>`).join('')}
+        <section class="card audio-row"><div><b>🎧 Todo seguido</b><div class="small muted">Unos 3 minutos</div></div>${sayBtn('au-all', LESSONS.map(l => AUDIO[l.id]).join(' '), 'Escuchar todo')}</section></main>`;
+    }
+    if (G.g === 'quiz' && G.pick) {
+      return `<main class="app">${back}<h1>Preguntas</h1><p class="muted">¿De qué parte quieres preguntas?</p><div class="route">
+        <button class="lrow" data-a="quizAll"><span class="n">★</span><span><span class="tt">Mezcladas</span><span class="meta">10 preguntas de todo el capítulo</span></span><span class="ic">›</span></button>
+        ${LESSONS.map((l, i) => `<button class="lrow" data-a="quizSt" data-id="${l.id}"><span class="n">${i + 1}</span><span><span class="tt">${l.icon} ${l.title}</span><span class="meta">${byT(l.id).length} preguntas</span></span><span class="ic">›</span></button>`).join('')}</div></main>`;
+    }
+    if (G.g === 'quiz') {
+      if (G.i >= G.list.length) {
+        const n = G.list.length;
+        return `<main class="app">${back}<section class="card grade"><span class="eyebrow">${G.title}</span><b>${G.ok}/${n}</b><p>${G.ok === n ? `¡Perfecto, ${NAME}!` : G.ok >= n * 0.7 ? '¡Muy bien! Ya casi lo dominas.' : 'Vas aprendiendo. Las que fallaste quedan en «Mis errores».'}</p>
+          <div class="row"><button class="btn" data-a="game" data-g="${G.spaced ? 'quiz' : (G.errors ? 'errors' : 'quiz')}">Otra ronda</button><button class="btn line" data-a="go" data-v="${G.spaced ? 'home' : 'review'}">${G.spaced ? 'Volver al inicio' : 'Volver'}</button></div></section></main>`;
+      }
+      const q = QB[G.list[G.i]];
+      return `<main class="app">${back}<div class="spread"><span class="eyebrow">${G.title}</span><span class="small muted tnum">${G.i + 1} de ${G.list.length}</span></div>
+        <section class="card q">${sayBtn('gq-' + G.i, qScript(q), 'Léemela', 'wide')}<p class="q-text">${q.q}</p>${vOpts(q, G.ch, 'gopt')}${G.ch != null ? vFb(q, G.ch, 'gf-' + G.i) : ''}</section>
+        ${G.ch != null ? `<button class="btn big-n wide" data-a="gnext">Siguiente →</button>` : ''}</main>`;
+    }
+    if (G.g === 'flash') {
+      const f = FLASH[G.list[G.i]];
+      return `<main class="app">${back}<div class="spread"><h1>Tarjetas</h1><span class="small muted tnum">${G.i + 1} de ${G.list.length}</span></div>
+        <button class="flip ${G.flip ? 'on' : ''}" data-a="flip" aria-label="Voltear tarjeta"><div class="flip-in"><div class="face front"><div><small>${L(f[0]).title}</small>${f[1]}<small class="hint-s">Toca para voltear</small></div></div><div class="face back"><div>${f[2]}</div></div></div></button>
+        ${sayBtn('fl-' + G.i, f[1] + '. ' + f[2], 'Escuchar', 'wide')}
+        <div class="nav-btns"><button class="btn line" data-a="fprev" ${G.i === 0 ? 'disabled' : ''}>← Anterior</button><button class="btn" data-a="fnext">${G.i === G.list.length - 1 ? 'Empezar de nuevo' : 'Siguiente →'}</button></div></main>`;
+    }
+    if (G.g === 'tf') {
+      if (G.i >= G.list.length) return `<main class="app">${back}<section class="card grade"><span class="eyebrow">Verdadero o falso</span><b>${G.ok}/${G.list.length}</b><div class="row"><button class="btn" data-a="game" data-g="tf">Otra vez</button><button class="btn line" data-a="go" data-v="review">Volver</button></div></section></main>`;
+      const t = TF[G.list[G.i]]; const ok = G.pick != null && G.pick === t[1];
+      return `<main class="app">${back}<div class="spread"><h1>¿Verdadero o falso?</h1><span class="small muted tnum">${G.i + 1} de ${G.list.length}</span></div>
+        <section class="card tf-card">${t[0]}</section>${sayBtn('tf-' + G.i, t[0] + ' ¿Verdadero o falso?', 'Léemela', 'wide')}
+        ${G.pick == null ? `<div class="tf-btns"><button class="btn big-n" data-a="tf" data-v="1">Verdadero</button><button class="btn big-n ghost" data-a="tf" data-v="0">Falso</button></div>`
+        : `<div class="fb ${ok ? 'ok' : 'no'}"><b class="h">${ok ? '¡Correcto!' : 'Casi.'}</b><p>Es <b>${t[1] ? 'verdadero' : 'falso'}</b>. ${t[2]}</p>${sayBtn('tff-' + G.i, (ok ? '¡Correcto! ' : 'Casi. ') + 'Es ' + (t[1] ? 'verdadero. ' : 'falso. ') + t[2], 'Explícame')}</div><button class="btn big-n wide" data-a="tfnext">Siguiente →</button>`}</main>`;
+    }
+    if (G.g === 'order') {
+      if (G.gi == null) return `<main class="app">${back}<h1>Ordenar</h1><div class="route">${ORDER_GAMES.map((o, i) => `<button class="lrow" data-a="ordPick" data-i="${i}"><span class="n">${i + 1}</span><span class="tt">${o.t}</span><span class="ic">›</span></button>`).join('')}</div></main>`;
+      const o = ORDER_GAMES[G.gi];
+      return `<main class="app">${backTo('review', 'Repasar')}<h1>Ordenar</h1><p class="q-text">${o.t}</p><p class="small muted">Usa las flechas ↑ ↓ para mover cada tarjeta.</p>
+        <div class="order-list">${G.arr.map((it, i) => { const cls = G.checked ? (it === i ? 'good' : 'badp') : '';
+          return `<div class="order-item ${cls}"><span class="on">${i + 1}</span><span>${o.items[it]}</span><span class="mv"><button data-a="ordUp" data-i="${i}" ${i === 0 ? 'disabled' : ''} aria-label="Subir">↑</button><button data-a="ordDn" data-i="${i}" ${i === G.arr.length - 1 ? 'disabled' : ''} aria-label="Bajar">↓</button></span></div>`; }).join('')}</div>
+        ${G.checked ? `<div class="fb ${G.arr.every((x, i) => x === i) ? 'ok' : 'no'}"><b class="h">${G.arr.every((x, i) => x === i) ? '¡Perfecto!' : 'Casi. Las verdes ya están bien.'}</b></div>` : ''}
+        <div class="nav-btns"><button class="btn" data-a="ordCheck">Revisar</button><button class="btn line" data-a="ordPick" data-i="${(G.gi + 1) % ORDER_GAMES.length}">Otro</button></div></main>`;
+    }
+    if (G.g === 'match') {
+      if (G.gi == null) return `<main class="app">${back}<h1>Relacionar</h1><div class="route">${MATCH_GAMES.map((o, i) => `<button class="lrow" data-a="matPick" data-i="${i}"><span class="n">${i + 1}</span><span class="tt">${o.t}</span><span class="ic">›</span></button>`).join('')}</div></main>`;
+      const m = MATCH_GAMES[G.gi]; const all = G.done.length === m.pairs.length;
+      return `<main class="app">${backTo('review', 'Repasar')}<h1>Relacionar</h1><p class="q-text">${m.t}</p><p class="small muted">Toca una palabra de la izquierda y luego su pareja de la derecha.</p>
+        <div class="match-grid"><div class="stack">${m.pairs.map((p, i) => `<button class="${G.done.includes(i) ? 'done' : ''} ${G.sel === i ? 'sel' : ''}" data-a="matL" data-i="${i}" ${G.done.includes(i) ? 'disabled' : ''}>${p[0]}</button>`).join('')}</div>
+        <div class="stack">${G.right.map(j => `<button class="${G.done.includes(j) ? 'done' : ''} ${G.err === j ? 'err' : ''}" data-a="matR" data-i="${j}" ${G.done.includes(j) ? 'disabled' : ''}>${m.pairs[j][1]}</button>`).join('')}</div></div>
+        ${all ? `<div class="fb ok"><b class="h">¡Todas unidas!</b></div><button class="btn wide" data-a="matPick" data-i="${(G.gi + 1) % MATCH_GAMES.length}">Siguiente juego →</button>` : ''}</main>`;
+    }
+    if (G.g === 'riddle') {
+      const r = RIDDLES[G.i];
+      return `<main class="app">${back}<div class="spread"><h1>Adivina quién soy</h1><span class="small muted tnum">${G.i + 1} de ${RIDDLES.length}</span></div>
+        <section class="card">${r.c.slice(0, G.n).map((c, i) => `<p class="clue-r"><span class="chip">Pista ${i + 1}</span><span>${c}</span></p>`).join('')}
+        ${sayBtn('rd-' + G.i + '-' + G.n, 'Adivina quién soy. ' + r.c.slice(0, G.n).join(' '), 'Léeme las pistas')}
+        ${G.show ? `<div class="model"><b>Soy…</b><p class="vt">${r.a}</p></div>` : ''}</section>
+        <div class="nav-btns">${!G.show && G.n < r.c.length ? `<button class="btn line" data-a="rdMore">Otra pista</button>` : ''}${G.show ? `<button class="btn" data-a="rdNext">Siguiente →</button>` : `<button class="btn" data-a="rdShow">¿Quién soy?</button>`}</div></main>`;
+    }
+    if (G.g === 'vocab') {
+      if (G.i >= G.list.length) return `<main class="app">${backTo('words', 'Palabras')}<section class="card grade"><span class="eyebrow">Palabras</span><b>${G.ok}/${G.list.length}</b><div class="row"><button class="btn" data-a="game" data-g="vocab">Otra vez</button><button class="btn line" data-a="go" data-v="words">Volver</button></div></section></main>`;
+      const g = GL[G.list[G.i]]; const opts = G.opts[G.i];
+      return `<main class="app">${backTo('words', 'Palabras')}<div class="spread"><h1>¿Qué palabra es?</h1><span class="small muted tnum">${G.i + 1} de ${G.list.length}</span></div>
+        <section class="card q"><p class="q-text">${g.d}</p>${sayBtn('vq-' + G.i, '¿Qué palabra es? ' + g.d, 'Léemela', 'wide')}
+        <div class="opts">${opts.map((k, i) => { let c = ''; if (G.ch != null) { if (k === g.k) c = 'ok'; else if (i === G.ch) c = 'no'; } return `<button class="opt ${c}" data-a="vopt" data-i="${i}" ${G.ch != null ? 'disabled' : ''}><span class="ov">${LET[i]}</span><span>${GL[k].t}</span></button>`; }).join('')}</div>
+        ${G.ch != null ? `<div class="fb ${opts[G.ch] === g.k ? 'ok' : 'no'}"><b class="h">${opts[G.ch] === g.k ? '¡Muy bien!' : 'Casi.'}</b><p>Es <b>${g.t}</b>. Ejemplo: ${g.ex}</p></div>` : ''}</section>
+        ${G.ch != null ? `<button class="btn big-n wide" data-a="vnext">Siguiente →</button>` : ''}</main>`;
+    }
+    if (G.g === 'cw') return vCW();
+    return `<main class="app">${back}</main>`;
+  }
+
+  /* Crucigrama */
+  const CWC = (() => {
+    const cells = {}; const nums = {};
+    const starts = CW.words.map((w, i) => ({ i, r: w.r, c: w.col })).sort((a, b) => a.r - b.r || a.c - b.c);
+    let n = 0; starts.forEach(s => { const k = s.r + '-' + s.c; if (!nums[k]) nums[k] = ++n; CW.words[s.i].n = nums[k]; });
+    CW.words.forEach((w, wi) => { for (let i = 0; i < w.w.length; i++) { const r = w.d === 'A' ? w.r : w.r + i, c = w.d === 'A' ? w.col + i : w.col; const k = r + '-' + c; (cells[k] = cells[k] || { ch: w.w[i], ws: [] }).ws.push(wi); } });
+    return { cells, nums };
+  })();
+  const cwKeys = wi => { const w = CW.words[wi]; const out = []; for (let i = 0; i < w.w.length; i++) out.push(w.d === 'A' ? w.r + '-' + (w.col + i) : (w.r + i) + '-' + w.col); return out; };
+  const cwSolved = wi => cwKeys(wi).every(k => (S.cw[k] || '') === CWC.cells[k].ch);
+  function vCW() {
+    const hl = UI.cwWord != null ? new Set(cwKeys(UI.cwWord)) : new Set();
+    let grid = '';
+    for (let r = 0; r < CW.H; r++) for (let c = 0; c < CW.W; c++) {
+      const k = r + '-' + c, cell = CWC.cells[k];
+      if (!cell) { grid += '<span class="cw-x"></span>'; continue; }
+      const v = S.cw[k] || ''; let cls = hl.has(k) ? 'hl' : '';
+      if (UI.cwCheck && v) cls += v === cell.ch ? ' good' : ' bad';
+      grid += `<label class="cw-c ${cls}">${CWC.nums[k] ? `<i>${CWC.nums[k]}</i>` : ''}<input data-cw="${k}" maxlength="2" value="${v}" autocomplete="off" autocorrect="off" spellcheck="false" autocapitalize="characters" aria-label="Casilla"></label>`;
+    }
+    const solved = CW.words.filter((_, i) => cwSolved(i)).length;
+    const clue = (d, t) => `<h3>${t}</h3><div class="clues">${CW.words.map((w, i) => ({ w, i })).filter(x => x.w.d === d).sort((a, b) => a.w.n - b.w.n).map(x => `<button class="clue ${UI.cwWord === x.i ? 'on' : ''} ${cwSolved(x.i) ? 'solved' : ''}" data-a="cwClue" data-i="${x.i}"><b>${x.w.n}</b><span>${x.w.c} <small class="muted">(${x.w.w.length})</small></span></button>`).join('')}</div>`;
+    const cur = UI.cwWord != null ? CW.words[UI.cwWord] : null;
+    return `<main class="app">${backTo('review', 'Repasar')}<div class="spread"><h1>Crucigrama</h1><span class="chip">${solved} de ${CW.words.length}</span></div>
+      <p class="small muted">Toca una pista y escribe. Sin acentos.</p>
+      ${cur ? `<div class="card cw-now"><b>${cur.n} ${cur.d === 'A' ? '→' : '↓'}</b> ${cur.c}</div>` : ''}
+      <div class="cw-wrap"><div class="cw" style="--cw:min(var(--cwmax), calc((100vw - 36px - ${(CW.W - 1) * 2}px) / ${CW.W}));grid-template-columns:repeat(${CW.W}, var(--cw))">${grid}</div></div>
+      <div class="nav-btns"><button class="btn" data-a="cwCheck">Revisar</button><button class="btn line" data-a="cwClear">Borrar todo</button></div>
+      ${clue('A', 'Horizontales →')}${clue('D', 'Verticales ↓')}</main>`;
+  }
+
+  /* Palabras */
+  function vWords() {
+    return `<main class="app"><h1>Palabras</h1><p class="muted">Las palabras difíciles del capítulo, con ejemplo. También aparecen subrayadas con <span class="hw-demo">puntitos<span class="hw-q">?</span></span> dentro de las estaciones.</p>
+      <button class="btn ghost wide" data-a="game" data-g="vocab">🎯 Juego: ¿qué palabra es?</button>
+      <label class="sr" for="gq">Buscar palabra</label><input id="gq" class="search" data-in="gq" type="search" placeholder="Buscar palabra…" value="${UI.q.replace(/"/g, '&quot;')}">
+      <div class="gloss" id="glist">${glossList()}</div></main>`;
+  }
+  function glossList() {
+    const q = UI.q.trim().toLowerCase();
+    const list = GLOSSARY.filter(g => !q || (g.t + ' ' + g.d).toLowerCase().includes(q)).sort((a, b) => a.t.localeCompare(b.t, 'es'));
+    if (!list.length) return '<p class="muted">No encontré esa palabra.</p>';
+    return list.map(g => `<div class="gterm"><div class="spread"><b>${g.t}</b><span class="chip">pág. ${g.p}</span></div><p>${g.d}</p><p class="gex">Ejemplo: ${g.ex}</p>${sayBtn('w-' + g.k, g.t + '. ' + g.d + ' Por ejemplo: ' + g.ex, 'Escuchar')}</div>`).join('');
+  }
+
+  /* Exámenes */
+  function vExams() {
+    return `<main class="app">${backTo('home', 'Inicio')}<h1>Exámenes de práctica</h1><p class="muted">Una pregunta por pantalla. Al final ves tu calificación del 0 al 10 y la explicación de cada respuesta.</p>
+      ${EXAMS.map(e => `<section class="card exrow"><div><b class="exn">${e.t}</b><div class="small muted">${e.s}</div>${S.exams[e.id] != null ? `<div class="small ok-n">Tu mejor calificación: ${S.exams[e.id]}</div>` : ''}</div><button class="btn" data-a="exStart" data-id="${e.id}">Empezar</button></section>`).join('')}</main>`;
+  }
+  function vExam() {
+    const X = UI.ex; const e = EXAMS.find(x => x.id === X.id);
+    if (X.done) {
+      const ok = e.qs.filter(id => X.ans[id] === QB[id].a).length; const g = Math.round(ok / e.qs.length * 100) / 10;
+      return `<main class="app">${backTo('exams', 'Exámenes')}<section class="card grade"><span class="eyebrow">${e.t}</span><b>${g}</b><p>${ok} de ${e.qs.length} correctas</p>${sayBtn('exg', `Tu calificación es ${String(g).replace('.', ' punto ')}. Tuviste ${ok} de ${e.qs.length} correctas. ${g >= 8 ? '¡Excelente trabajo, ' + NAME + '!' : g >= 6 ? 'Vas bien. Repasa las que fallaste.' : 'No te preocupes: repasa las estaciones y vuelve a intentarlo.'}`, 'Escuchar')}</section>
+        <section class="card"><h2>Revisión</h2>${e.qs.map((id, i) => { const q = QB[id]; const y = X.ans[id]; const good = y === q.a;
+          return `<div class="review-item"><b>${i + 1}. ${q.q}</b>${good ? `<span class="ok">✓ ${q.o[q.a]}</span>` : `<span class="yo">✗ Tu respuesta: ${y == null ? '(sin responder)' : q.o[y]}</span><span class="ok">✓ Correcta: ${q.o[q.a]}</span>`}<span class="small muted">${q.e} · pág. ${q.p}</span></div>`; }).join('')}</section>
+        <button class="btn wide" data-a="exStart" data-id="${e.id}">Intentar de nuevo</button></main>`;
+    }
+    const q = QB[e.qs[X.i]]; const ch = X.ans[q.id];
+    return `<main class="app">${backTo('exams', 'Salir del examen')}<div class="spread"><span class="eyebrow">${e.t}</span><span class="small muted tnum">${X.i + 1} de ${e.qs.length}</span></div>
+      <section class="card q">${q.f ? `<span class="chip fmt">${q.f}</span>` : ''}${sayBtn('exq-' + X.i, qScript(q, X.i + 1), 'Léemela', 'wide')}<p class="q-text">${q.q}</p>
+        <div class="opts">${q.o.map((o, i) => `<button class="opt ${ch === i ? 'picked' : ''}" data-a="exOpt" data-i="${i}"><span class="ov">${LET[i]}</span><span>${o}</span></button>`).join('')}</div></section>
+      <div class="nav-btns"><button class="btn line" data-a="exPrev" ${X.i === 0 ? 'disabled' : ''}>← Anterior</button>${X.i < e.qs.length - 1 ? `<button class="btn" data-a="exNext">Siguiente →</button>` : `<button class="btn" data-a="exEnd">Terminar y calificar</button>`}</div>
+      <div class="qnav" aria-label="Ir a pregunta">${e.qs.map((id, i) => `<button class="${X.ans[id] != null ? 'ans' : ''} ${i === X.i ? 'cur' : ''}" data-a="exGo" data-i="${i}">${i + 1}</button>`).join('')}</div></main>`;
+  }
+
+  /* Hoja de repaso */
+  function vHoja() {
+    return `<main class="app">${backTo('home', 'Inicio')}<h1>Hoja de repaso</h1><p class="muted">Primero mira el esquema. Luego, en los cuadros, intenta recordar y toca cada casilla para destapar la respuesta.</p>
+      <section class="card"><h2>Todo el capítulo en un cuadro sinóptico</h2>${sayBtn('hj', `Todo el capítulo ${CHAP.word} en un cuadro. ` + LESSONS.filter(l => !l.bridge).map(l => AUDIO[l.id]).join(' '), 'Explícame todo', 'wide')}${V.sinop(BIG_SINOP.root, BIG_SINOP.br)}</section>
+      ${COMPARE.map((t, ti) => `<section class="card"><div class="spread"><h2>${t.t}</h2><button class="btn small line" data-a="rvAll" data-i="${ti}">Destapar todo</button></div>
+        <div class="tbl-wrap"><table class="tbl rvt"><thead><tr>${t.head.map(h => `<th>${h}</th>`).join('')}</tr></thead><tbody>${t.rows.map((r, ri) => `<tr><th scope="row">${r[0]}</th>${r.slice(1).map((c, ci) => { const k = ti + '-' + ri + '-' + ci; const o = UI.rv[k];
+          return `<td><button class="rv ${o ? 'open' : ''}" data-a="rv" data-k="${k}">${o ? c : '<span>Toca para ver</span>'}</button></td>`; }).join('')}</tr>`).join('')}</tbody></table></div></section>`).join('')}</main>`;
+  }
+
+  /* Videos */
+  function vVideos() {
+    return `<main class="app">${backTo('home', 'Inicio')}<h1>Videos y lecturas</h1><p class="muted">Son búsquedas en YouTube: elige un video corto de una universidad o de un profesor. Si un video contradice al libro, quédate con el libro.</p>
+      ${VIDEOS.map(v => `<section class="card vrow"><div><b>${v.t}</b><div class="small muted">${L(v.s).icon} ${L(v.s).title}</div></div><a class="btn small" href="https://www.youtube.com/results?search_query=${encodeURIComponent(v.q)}" target="_blank" rel="noopener">Buscar ▶</a></section>`).join('')}
+      <h2>Lecturas oficiales</h2>${READINGS.map(r => `<section class="card"><b>${r.t}</b><span class="small muted">${r.s}</span><a class="link" href="${r.url}" target="_blank" rel="noopener">Abrir ↗</a></section>`).join('')}</main>`;
+  }
+
+  /* Avance y voz */
+  function vAvance() {
+    const ans = Object.keys(S.ans); const ok = ans.filter(k => S.ans[k]).length;
+    const nDone = LESSONS.filter(l => S.done[l.id]).length;
+    const rates = [[0.8, 'Lenta'], [0.95, 'Normal'], [1.15, 'Rápida']];
+    return `<main class="app">${backTo('home', 'Inicio')}<h1>Mi avance</h1>
+      <div class="stats"><div class="stat"><b>${nDone}/${LESSONS.length}</b><span>estaciones</span></div><div class="stat"><b>${ans.length ? Math.round(ok / ans.length * 100) : 0}%</b><span>aciertos (${ok} de ${ans.length})</span></div><div class="stat"><b>${streak()}</b><span>días seguidos</span></div></div>
+      <section class="card"><h2>Por estación</h2>${LESSONS.map(l => { const p = S.done[l.id] ? 100 : Math.round(screenIndex(l.id, pos(l.id).step, pos(l.id).sub) / totalScreens(l.id) * 100);
+        return `<div class="unitbar"><div class="spread small"><span>${l.icon} ${l.title}</span><span class="tnum">${p}%</span></div><div class="bar ${p === 100 ? 'ok' : ''}"><i style="width:${p}%"></i></div></div>`; }).join('')}</section>
+      <section class="card"><h2>La voz que explica</h2><p class="small muted">Velocidad:</p><div class="row">${rates.map(r => `<button class="icon-btn ${Math.abs(S.rate - r[0]) < 0.01 ? 'on' : ''}" data-a="rate" data-v="${r[0]}">${r[1]}</button>`).join('')}</div>
+        ${sayBtn('test', `Hola, ${NAME}. Así suena mi voz. Si quieres, la puedo hacer más lenta o más rápida.`, 'Probar la voz')}
+        <label class="check"><input type="checkbox" data-a="auto" ${S.auto ? 'checked' : ''}><span><b>Que la voz explique sola</b><br><small class="muted">Al abrir cada pantalla de estudio, la voz empieza a explicar sin que toques nada.</small></span></label>
+        ${synth ? '' : '<p class="ojo small">Este navegador no tiene voz. Abre la página en Chrome.</p>'}</section>
+      <section class="card"><h2>Otras opciones</h2><button class="btn line wide" data-a="tour">▶ Ver otra vez cómo se usa</button><button class="btn line wide danger" data-a="reset">Borrar mi avance</button></section></main>`;
+  }
+
+  /* Recorrido guiado */
+  function mock(k) {
+    if (k === 'hello') return `<div class="phone"><div class="m-hero">Buenas tardes, ${NAME}</div><div class="m-btn">Continuar →</div><div class="m-line">▶ Ver cómo se usa</div></div>`;
+    if (k === 'continue') return `<div class="phone"><div class="m-hero">Buenas tardes, ${NAME}</div><div class="m-btn pulse">Continuar →<small>Paso 2 de 5: Entender</small></div></div>`;
+    if (k === 'steps') return `<div class="phone"><div class="m-steps">${STEP_NAMES.map((s, i) => `<span class="${i < 2 ? 'on' : ''}">${STEP_IC[i]}<br>${s}</span>`).join('')}</div></div>`;
+    if (k === 'read') return `<div class="phone"><div class="fr-where small"><div><span class="lab">Empieza en</span>«${CHAP.tourRead[0]}…»</div><div><span class="lab">Termina en</span>«…${CHAP.tourRead[1]}»</div></div><div class="m-btn pulse">Ya lo leí ✓</div></div>`;
+    if (k === 'voice') return `<div class="phone"><div class="say wide on pulse"><span class="ic">🔊</span><span class="lbl">Explícame</span></div><div class="m-line">Lenta · Normal · Rápida</div></div>`;
+    if (k === 'word') return `<div class="phone"><p>${CHAP.tourWord[0]}<span class="hw-demo">${CHAP.tourWord[1]}<span class="hw-q">?</span></span>${CHAP.tourWord[2]}</p><div class="m-sheet"><b>${CHAP.tourWord[3]}</b><br><small>${CHAP.tourWord[4]}</small></div></div>`;
+    return `<div class="phone"><div class="m-sheet center">☕<br><b>Llevas 10 minutos</b><br><small>La página guarda dónde ibas</small></div></div>`;
+  }
+  function vTour() {
+    const T = UI.tour; const s = TOUR[T.i];
+    return `<div class="focus tour">
+      <header class="ftop"><button class="xbtn" data-a="tourX">✕ Salir</button><div class="fstep"><b>Cómo se usa la página</b><span>${T.i + 1} de ${TOUR.length}</span></div></header>
+      <div class="bar thin"><i style="width:${Math.round((T.i + 1) / TOUR.length * 100)}%"></i></div>
+      <main class="app focus-main"><section class="sheet center tour-s"><div class="big-emoji" aria-hidden="true">${s.ic}</div><h2>${s.t}</h2>${mock(s.mock)}<p class="body">${s.s}</p></section></main>
+      <footer class="fbot"><button class="back-l" data-a="tourPrev" ${T.i === 0 ? 'disabled' : ''}>← Atrás</button>
+        <button class="btn line" data-a="tourPlay">${T.play ? '⏸ Pausa' : '▶ Seguir'}</button>
+        ${T.i < TOUR.length - 1 ? `<button class="btn big-n" data-a="tourNext">Siguiente →</button>` : `<button class="btn big-n" data-a="tourEnd">¡Empezar!</button>`}</footer></div>`;
+  }
+
+  /* Hoja de palabra y avisos */
+  function vSheet() {
+    const g = GL[UI.sheet]; if (!g) return '';
+    return `<div class="scrim" data-a="sheetX"></div><div class="bsheet" role="dialog" aria-modal="true" aria-label="${g.t}"><div class="grab" aria-hidden="true"></div><div class="eyebrow">Palabra difícil · libro, pág. ${g.p}</div><h2>${g.t}</h2><p class="body">${g.d}</p><p class="gex"><b>Ejemplo:</b> ${g.ex}</p>
+      <div class="nav-btns">${sayBtn('gl-' + g.k, g.t + '. ' + g.d + ' Por ejemplo: ' + g.ex, 'Escuchar')}<button class="btn" data-a="sheetX">Entendido</button></div></div>`;
+  }
+  function vModal() {
+    if (UI.modal === 'pause') return `<div class="scrim"></div><div class="modal" role="dialog" aria-modal="true" aria-label="Descanso"><div class="big-emoji" aria-hidden="true">☕</div><h2>Llevas 10 minutos</h2><p>Lo estás haciendo muy bien, ${NAME}. Puedes descansar: la página guarda dónde ibas.</p>
+      <button class="btn wide" data-a="rest">Descansar ahora</button><button class="btn line wide" data-a="more5">Seguir 5 minutos más</button></div>`;
+    return '';
+  }
+
+  /* ═════════ RENDER ═════════ */
+  function render() {
+    SAY = {};
+    const v = UI.view; let html;
+    if (v === 'lesson') html = vLesson();
+    else if (v === 'tour') html = vTour();
+    else {
+      html = ({ home: vHome, study: vStudy, next: vNext, review: vReview, game: vGame, words: vWords, exams: vExams, exam: vExam, hoja: vHoja, videos: vVideos, avance: vAvance }[v] || vHome)();
+      html += vTabs();
+    }
+    if (UI.sheet) html += vSheet();
+    if (UI.modal) html += vModal();
+    app.innerHTML = html;
+    after();
+  }
+  function after() {
+    if (UI.view === 'lesson' && S.auto && !UI.modal && UI.autoKey !== UI.mainKey) { UI.autoKey = UI.mainKey; const id = UI.mainSay; setTimeout(() => { if (SAY[id] && UI.view === 'lesson') speak(SAY[id], id); }, 350); }
+    if (UI.view === 'tour' && UI.tour.play && UI.tour.spoken !== UI.tour.i) {
+      const i = UI.tour.i; UI.tour.spoken = i;
+      speak(TOUR[i].s, 'tour', () => { setTimeout(() => { if (UI.view === 'tour' && UI.tour.play && UI.tour.i === i && i < TOUR.length - 1) { UI.tour.i++; render(); } }, 700); });
+    }
+    if (UI.sheet) { const b = app.querySelector('.bsheet .btn'); if (b) b.focus({ preventScroll: true }); }
+  }
+  function go(v) { stop(); UI.view = v; UI.sheet = null; UI.modal = null; render(); top(); }
+  function openLesson(id) { stop(); S.at = id; save(); markDay(); UI.st = id; UI.view = 'lesson'; UI.t0 = Date.now(); UI.autoKey = ''; render(); top(); }
+  function move(d) {
+    const id = UI.st; let { step, sub } = pos(id);
+    if (d > 0) { if (sub + 1 < count(id, step)) sub++; else if (step < 4) { step++; sub = 0; toast(`Paso ${step + 1} de 5: ${STEP_NAMES[step]} ${STEP_IC[step]}`); } }
+    else { if (sub > 0) sub--; else if (step > 0) { step--; sub = count(id, step) - 1; } }
+    S.pos[id] = { step, sub }; save(); stop(); render(); top();
+  }
+
+  /* ═════════ EVENTOS ═════════ */
+  document.addEventListener('click', ev => {
+    const el = ev.target.closest('[data-a]'); if (!el || el.disabled) return;
+    const a = el.dataset.a; const G = UI.game;
+    switch (a) {
+      case 'go': go(el.dataset.v); break;
+      case 'cont': { const nx = nextStation(); if (nx) openLesson(nx); break; }
+      case 'open': openLesson(el.dataset.id); break;
+      case 'exit': stop(); UI.view = 'home'; render(); top(); toast('Guardado. Aquí te espera el botón Continuar.'); break;
+      case 'next': move(1); break;
+      case 'prev': move(-1); break;
+      case 'reveal': { const p = pos(UI.st); S.reveal[`${UI.st}:${p.step}:${p.sub}`] = true; save(); stop(); render();
+        if (S.auto) { const b = app.querySelector('[data-id^="a-"]'); if (b) speak(SAY[b.dataset.id], b.dataset.id); }
+        const m = app.querySelector('.model'); if (m) m.scrollIntoView({ behavior: 'smooth', block: 'center' }); break; }
+      case 'lopt': { const p = pos(UI.st); const k = UI.st + ':' + p.sub; if (S.lq[k] != null) break; const q = coreQs(UI.st)[p.sub]; const i = +el.dataset.i; S.lq[k] = i; rec(q, i === q.a); stop(); render();
+        const f = app.querySelector('.fb'); if (f) f.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        if (S.auto) { const b = app.querySelector('.fb [data-a="say"]'); if (b) speak(SAY[b.dataset.id], b.dataset.id); } break; }
+      case 'key': { const id = UI.st; const i = +el.dataset.i; const k = S.keys[id] || []; S.keys[id] = el.checked ? k.concat(i) : k.filter(x => x !== i); save(); break; }
+      case 'finish': { document.querySelectorAll('.toast').forEach(t => t.remove()); const id = UI.st; S.done[id] = S.done[id] || today(); S.sp[id] = S.sp[id] || []; S.pos[id] = { step: 0, sub: 0 };
+        Object.keys(S.reveal).forEach(k => { if (k.indexOf(id + ':') === 0) delete S.reveal[k]; }); Object.keys(S.lq).forEach(k => { if (k.indexOf(id + ':') === 0) delete S.lq[k]; });
+        const nx = LESSONS.find(l => !S.done[l.id]); S.at = nx ? nx.id : id; save(); stop(); UI.fin = id; UI.view = 'next'; render(); top(); break; }
+      case 'say': { const id = el.dataset.id; if (speakingId === id) stop(); else speak(SAY[id], id); break; }
+      case 'gl': ev.preventDefault(); UI.sheet = el.dataset.k; render(); break;
+      case 'sheetX': stop(); UI.sheet = null; render(); break;
+      case 'rest': UI.modal = null; stop(); UI.view = 'home'; render(); top(); toast('Guardado. ¡Buen descanso!'); break;
+      case 'more5': UI.modal = null; UI.t0 = Date.now() - PAUSE_MS + 5 * 60 * 1000; render(); break;
+      case 'tour': stop(); UI.tour = { i: 0, play: true, spoken: -1 }; UI.view = 'tour'; render(); top(); break;
+      case 'tourNext': if (UI.tour.i < TOUR.length - 1) { stop(); UI.tour.i++; UI.tour.spoken = -1; render(); } break;
+      case 'tourPrev': if (UI.tour.i > 0) { stop(); UI.tour.i--; UI.tour.spoken = -1; render(); } break;
+      case 'tourPlay': UI.tour.play = !UI.tour.play; if (!UI.tour.play) stop(); else UI.tour.spoken = -1; render(); break;
+      case 'tourX': case 'tourEnd': stop(); S.tour = true; save(); UI.view = 'home'; render(); top(); break;
+      case 'spaced': { const id = el.dataset.id; const list = shuffle(byT(id).map(q => q.id)).slice(0, 5); startQuiz(list, 'Repaso de hoy · ' + L(id).title, { spaced: id }); break; }
+      case 'game': startGame(el.dataset.g); break;
+      case 'quizAll': startQuiz(shuffle(BANK.map(q => q.id)).slice(0, 10), 'Mezcladas'); break;
+      case 'quizSt': startQuiz(shuffle(byT(el.dataset.id).map(q => q.id)), L(el.dataset.id).title); break;
+      case 'gopt': { if (G.ch != null) break; const q = QB[G.list[G.i]]; G.ch = +el.dataset.i; const ok = G.ch === q.a; if (ok) G.ok++; rec(q, ok, G.errors); stop(); render();
+        const f = app.querySelector('.fb'); if (f) f.scrollIntoView({ behavior: 'smooth', block: 'center' }); break; }
+      case 'gnext': G.i++; G.ch = null; stop();
+        if (G.i >= G.list.length && G.spaced) { S.sp[G.spaced] = (S.sp[G.spaced] || []).concat(today()); save(); }
+        render(); top(); break;
+      case 'flip': G.flip = !G.flip; render(); break;
+      case 'fnext': G.i = (G.i + 1) % G.list.length; G.flip = false; stop(); render(); break;
+      case 'fprev': G.i = Math.max(0, G.i - 1); G.flip = false; stop(); render(); break;
+      case 'tf': { const t = TF[G.list[G.i]]; G.pick = el.dataset.v === '1'; if (G.pick === t[1]) G.ok++; stop(); render(); break; }
+      case 'tfnext': G.i++; G.pick = null; stop(); render(); top(); break;
+      case 'ordPick': { const gi = +el.dataset.i; const n = ORDER_GAMES[gi].items.length; let arr; do { arr = shuffle([...Array(n).keys()]); } while (arr.every((x, i) => x === i)); Object.assign(G, { gi, arr, checked: false }); render(); top(); break; }
+      case 'ordUp': case 'ordDn': { const i = +el.dataset.i, j = a === 'ordUp' ? i - 1 : i + 1; [G.arr[i], G.arr[j]] = [G.arr[j], G.arr[i]]; G.checked = false; render(); break; }
+      case 'ordCheck': G.checked = true; render(); break;
+      case 'matPick': { const gi = +el.dataset.i; const n = MATCH_GAMES[gi].pairs.length; Object.assign(G, { gi, right: shuffle([...Array(n).keys()]), done: [], sel: null, err: null }); render(); top(); break; }
+      case 'matL': G.sel = +el.dataset.i; G.err = null; render(); break;
+      case 'matR': { const j = +el.dataset.i; if (G.sel == null) { toast('Primero toca una palabra de la izquierda'); break; } if (j === G.sel) { G.done.push(j); G.sel = null; G.err = null; } else { G.err = j; } render(); break; }
+      case 'rdMore': G.n++; stop(); render(); break;
+      case 'rdShow': G.show = true; stop(); render(); break;
+      case 'rdNext': G.i = (G.i + 1) % RIDDLES.length; G.n = 1; G.show = false; stop(); render(); break;
+      case 'vopt': { if (G.ch != null) break; G.ch = +el.dataset.i; if (G.opts[G.i][G.ch] === G.list[G.i]) G.ok++; render(); break; }
+      case 'vnext': G.i++; G.ch = null; stop(); render(); top(); break;
+      case 'cwClue': { UI.cwWord = +el.dataset.i; UI.cwCheck = false; render(); const k = cwKeys(UI.cwWord).find(x => (S.cw[x] || '') !== CWC.cells[x].ch) || cwKeys(UI.cwWord)[0]; const inp = app.querySelector(`[data-cw="${k}"]`); if (inp) inp.focus(); break; }
+      case 'cwCheck': UI.cwCheck = true; render(); { const s = CW.words.filter((_, i) => cwSolved(i)).length; toast(s === CW.words.length ? '¡Crucigrama completo! 🎉' : `Llevas ${s} de ${CW.words.length} palabras`); } break;
+      case 'cwClear': if (ask('cw', 'Toca otra vez «Borrar todo» para confirmar')) { S.cw = {}; save(); UI.cwCheck = false; render(); } break;
+      case 'exStart': UI.ex = { id: el.dataset.id, i: 0, ans: {}, done: false }; stop(); UI.view = 'exam'; render(); top(); break;
+      case 'exOpt': { const e = EXAMS.find(x => x.id === UI.ex.id); UI.ex.ans[e.qs[UI.ex.i]] = +el.dataset.i; render(); break; }
+      case 'exNext': UI.ex.i++; stop(); render(); top(); break;
+      case 'exPrev': UI.ex.i--; stop(); render(); top(); break;
+      case 'exGo': UI.ex.i = +el.dataset.i; stop(); render(); top(); break;
+      case 'exEnd': { const e = EXAMS.find(x => x.id === UI.ex.id); const miss = e.qs.filter(id => UI.ex.ans[id] == null).length;
+        if (miss && !ask('ex', `Te faltan ${miss} preguntas. Toca otra vez para calificar así`)) break;
+        UI.ex.done = true; e.qs.forEach(id => { if (UI.ex.ans[id] != null) rec(QB[id], UI.ex.ans[id] === QB[id].a); });
+        const g = Math.round(e.qs.filter(id => UI.ex.ans[id] === QB[id].a).length / e.qs.length * 100) / 10; S.exams[e.id] = Math.max(S.exams[e.id] || 0, g); save(); stop(); render(); top(); break; }
+      case 'rv': UI.rv[el.dataset.k] = !UI.rv[el.dataset.k]; render(); break;
+      case 'rvAll': { const ti = +el.dataset.i; const t = COMPARE[ti]; t.rows.forEach((r, ri) => r.slice(1).forEach((_, ci) => { UI.rv[ti + '-' + ri + '-' + ci] = true; })); render(); break; }
+      case 'rate': S.rate = +el.dataset.v; save(); render(); speak(`Así hablo a esta velocidad, ${NAME}.`, 'test'); break;
+      case 'auto': S.auto = el.checked; save(); toast(S.auto ? 'La voz explicará sola cada pantalla' : 'La voz solo habla cuando tocas Explícame'); break;
+      case 'reset': if (ask('reset', 'Toca otra vez para borrar todo tu avance (no se puede deshacer)')) { const keep = { rate: S.rate, auto: S.auto, tour: S.tour }; S = Object.assign(defaults(), keep); save(); go('home'); toast('Avance borrado'); } break;
+    }
+  });
+  document.addEventListener('input', ev => {
+    const el = ev.target;
+    if (el.dataset.in === 'note') { S.notes[UI.st] = el.value; save(); }
+    else if (el.dataset.in === 'gq') { UI.q = el.value; SAY = {}; const box = document.getElementById('glist'); if (box) box.innerHTML = glossList(); }
+    else if (el.dataset.cw) {
+      const k = el.dataset.cw; const v = (el.value || '').toUpperCase().normalize('NFD').replace(/[^A-ZÑ]/g, '').slice(-1);
+      el.value = v; if (v) S.cw[k] = v; else delete S.cw[k]; save();
+      if (v) { const ws = UI.cwWord != null && CWC.cells[k].ws.includes(UI.cwWord) ? UI.cwWord : CWC.cells[k].ws[0]; const keys = cwKeys(ws); const nk = keys[keys.indexOf(k) + 1]; if (nk) { const n = app.querySelector(`[data-cw="${nk}"]`); if (n) { n.focus(); n.select(); } } }
+    }
+  });
+  document.addEventListener('keydown', ev => { if (ev.key === 'Escape' && UI.sheet) { UI.sheet = null; stop(); render(); } });
+  document.addEventListener('focusin', ev => { const k = ev.target.dataset && ev.target.dataset.cw; if (k && (UI.cwWord == null || !CWC.cells[k].ws.includes(UI.cwWord))) { UI.cwWord = CWC.cells[k].ws[0]; const box = app.querySelector('.cw-now'); const w = CW.words[UI.cwWord]; if (box) box.innerHTML = `<b>${w.n} ${w.d === 'A' ? '→' : '↓'}</b> ${w.c}`; } });
+
+  /* Pausa amable a los 10 minutos */
+  setInterval(() => { if (UI.view === 'lesson' && !UI.modal && Date.now() - UI.t0 >= PAUSE_MS) { stop(); UI.modal = 'pause'; render(); } }, 15000);
+  document.addEventListener('visibilitychange', () => { if (document.hidden) stop(); });
+
+  render();
+})();
+
+</script>
+</body>
+</html>
